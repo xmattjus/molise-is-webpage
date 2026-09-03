@@ -40,7 +40,7 @@ In alternativa usa direttamente Node.js `22.12.0` o superiore.
 npm run build
 ```
 
-Il risultato statico viene generato in `dist/` ed è adatto a Cloudflare Pages.
+Il risultato statico viene generato in `dist/` e viene pubblicato tramite Cloudflare Workers Static Assets.
 
 ## Route
 
