@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import LegalPage from '../components/LegalPage.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Termini e condizioni — Molise Is"
+  description="Termini e condizioni di utilizzo di Molise Is."
+>
+  <Header />
+  <LegalPage
+    eyebrow="Informazioni legali"
+    title="Termini e condizioni"
+    intro="Questa pagina ospiterà le condizioni applicabili all'utilizzo del sito, dell'app e dei servizi Molise Is."
+  >
+    <h2>Ambito di applicazione</h2>
+    <p>
+      Definire i servizi a cui si applicano i termini e i soggetti che li possono utilizzare.
+    </p>
+
+    <h2>Utilizzo del servizio</h2>
+    <p>
+      Descrivere le condizioni di utilizzo, gli eventuali requisiti dell'account e i comportamenti non consentiti.
+    </p>
+
+    <h2>Contenuti e segnalazioni</h2>
+    <p>
+      Specificare le regole relative ai contenuti presenti su Molise Is e agli eventuali contenuti o suggerimenti inviati dagli utenti.
+    </p>
+
+    <h2>Disponibilità e responsabilità</h2>
+    <p>
+      Definire le condizioni di disponibilità del servizio e le limitazioni di responsabilità applicabili nel rispetto della normativa vigente.
+    </p>
+
+    <h2>Modifiche e contatti</h2>
+    <p>
+      Indicare come verranno comunicate eventuali modifiche ai termini e inserire il recapito ufficiale per richieste o chiarimenti.
+    </p>
+  </LegalPage>
+  <Footer />
+</BaseLayout>

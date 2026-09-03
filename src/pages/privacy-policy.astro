@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import LegalPage from '../components/LegalPage.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Privacy policy — Molise Is"
+  description="Privacy policy di Molise Is."
+>
+  <Header />
+  <LegalPage
+    eyebrow="Informazioni legali"
+    title="Privacy policy"
+    intro="Questa pagina ospiterà le informazioni sul trattamento dei dati personali per il sito e i servizi Molise Is."
+  >
+    <h2>Titolare del trattamento</h2>
+    <p>
+      Inserire qui i dati identificativi e di contatto del titolare del trattamento.
+    </p>
+
+    <h2>Dati trattati e finalità</h2>
+    <p>
+      Descrivere le categorie di dati trattati, le finalità del trattamento e le relative basi giuridiche.
+    </p>
+
+    <h2>Servizi e destinatari</h2>
+    <p>
+      Elencare eventuali fornitori e servizi terzi coinvolti nel funzionamento del sito o dell'app, indicando
+      quando necessario il relativo ruolo nel trattamento dei dati.
+    </p>
+
+    <h2>Conservazione e diritti</h2>
+    <p>
+      Specificare tempi o criteri di conservazione e modalità con cui gli interessati possono esercitare i propri diritti.
+    </p>
+
+    <h2>Contatti</h2>
+    <p>
+      Inserire qui il recapito ufficiale dedicato alle richieste relative alla privacy.
+    </p>
+  </LegalPage>
+  <Footer />
+</BaseLayout>

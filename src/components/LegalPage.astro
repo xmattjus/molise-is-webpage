@@ -1,0 +1,141 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+}
+
+const { eyebrow, title, intro } = Astro.props;
+---
+
+<main class="legal-main">
+  <section class="legal-hero">
+    <div class="legal-orb" aria-hidden="true"></div>
+    <div class="container legal-heading">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="legal-intro">{intro}</p>
+    </div>
+  </section>
+
+  <section class="container legal-content">
+    <aside class="draft-note" role="note">
+      <strong>Pagina predisposta</strong>
+      <p>
+        La struttura è pronta per il testo legale definitivo. Il contenuto qui presente è intenzionalmente
+        indicativo e non sostituisce una privacy policy o termini e condizioni validati.
+      </p>
+    </aside>
+
+    <article class="legal-article">
+      <slot />
+    </article>
+  </section>
+</main>
+
+<style>
+  .legal-main {
+    min-height: 75vh;
+  }
+
+  .legal-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 10rem 0 4rem;
+  }
+
+  .legal-orb {
+    position: absolute;
+    top: -22rem;
+    right: -16rem;
+    width: 46rem;
+    height: 46rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-secondary) 16%, transparent), transparent 68%);
+    pointer-events: none;
+  }
+
+  .legal-heading {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    max-width: 11ch;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 650;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .legal-intro {
+    max-width: 43rem;
+    margin: 1.5rem 0 0;
+    color: var(--color-text-muted);
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  }
+
+  .legal-content {
+    display: grid;
+    grid-template-columns: minmax(14rem, 0.34fr) minmax(0, 0.66fr);
+    gap: clamp(2rem, 7vw, 6rem);
+    padding-bottom: var(--section-space);
+  }
+
+  .draft-note {
+    align-self: start;
+    padding: 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent) 28%, transparent);
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--color-accent) 7%, var(--color-background));
+  }
+
+  .draft-note strong {
+    font-size: 0.9rem;
+  }
+
+  .draft-note p {
+    margin: 0.45rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .legal-article :global(h2) {
+    margin: 2.6rem 0 0.8rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.65rem, 3vw, 2.3rem);
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+  }
+
+  .legal-article :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .legal-article :global(p),
+  .legal-article :global(li) {
+    color: var(--color-text-muted);
+  }
+
+  .legal-article :global(ul) {
+    padding-left: 1.25rem;
+  }
+
+  .legal-article :global(a) {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  @media (max-width: 48rem) {
+    .legal-content {
+      grid-template-columns: 1fr;
+    }
+
+    .draft-note {
+      order: 2;
+    }
+  }
+</style>

@@ -1,0 +1,289 @@
+<div class="preview-wrap" aria-label="Anteprima stilizzata dell'app Molise Is">
+  <div class="shape shape--one"></div>
+  <div class="shape shape--two"></div>
+
+  <div class="phone">
+    <div class="phone-top"><span>Molise Is</span><span class="avatar">M</span></div>
+    <div class="phone-copy">
+      <span class="tiny-label">OGGI IN MOLISE</span>
+      <strong>Un posto nuovo<br />è più vicino<br />di quanto pensi.</strong>
+    </div>
+    <div class="place-card place-card--primary">
+      <span class="place-icon">⌁</span>
+      <div><small>LUOGO DEL GIORNO</small><b>Scopri qualcosa di inatteso</b></div>
+    </div>
+    <div class="mini-grid">
+      <div><span class="dot dot--blue"></span><small>Eventi</small></div>
+      <div><span class="dot dot--orange"></span><small>Luoghi</small></div>
+      <div><span class="dot dot--green"></span><small>Preferiti</small></div>
+    </div>
+  </div>
+
+  <div class="floating-card floating-card--event">
+    <span class="event-date">12</span>
+    <span><small>QUESTA SETTIMANA</small><b>Eventi da non perdere</b></span>
+  </div>
+
+  <div class="floating-card floating-card--place">
+    <span class="pin">●</span>
+    <span><small>DA SCOPRIRE</small><b>Borghi, natura, sapori</b></span>
+  </div>
+</div>
+
+<style>
+  .preview-wrap {
+    position: relative;
+    min-height: 43rem;
+  }
+
+  .phone {
+    position: absolute;
+    z-index: 4;
+    top: 3rem;
+    left: 50%;
+    width: min(22rem, 74vw);
+    min-height: 38rem;
+    padding: 1.15rem;
+    border: 8px solid var(--color-text);
+    border-radius: 3rem;
+    background: #fffdf8;
+    box-shadow: var(--shadow-soft);
+    transform: translateX(-49%) rotate(3deg);
+  }
+
+  .phone::before {
+    position: absolute;
+    top: 0.55rem;
+    left: 50%;
+    width: 5.5rem;
+    height: 1.3rem;
+    border-radius: 999px;
+    content: '';
+    background: var(--color-text);
+    transform: translateX(-50%);
+  }
+
+  .phone-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.9rem 0.35rem 1rem;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .avatar {
+    display: grid;
+    width: 2.2rem;
+    height: 2.2rem;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    background: var(--color-primary);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+  }
+
+  .phone-copy {
+    padding: 2rem 0.35rem 1.8rem;
+  }
+
+  .tiny-label,
+  .floating-card small,
+  .place-card small {
+    display: block;
+    color: var(--color-accent);
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+  }
+
+  .phone-copy strong {
+    display: block;
+    margin-top: 0.65rem;
+    font-family: var(--font-display);
+    font-size: 2.15rem;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .place-card {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1.15rem;
+    border-radius: 1.5rem;
+  }
+
+  .place-card--primary {
+    color: white;
+    background: var(--color-primary);
+  }
+
+  .place-card--primary small {
+    color: #d9f5e8;
+  }
+
+  .place-card b,
+  .floating-card b {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.86rem;
+  }
+
+  .place-icon {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.18);
+    font-size: 1.5rem;
+  }
+
+  .mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    margin-top: 0.9rem;
+  }
+
+  .mini-grid > div {
+    display: grid;
+    min-height: 5.6rem;
+    place-items: center;
+    align-content: center;
+    gap: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1.25rem;
+    background: white;
+  }
+
+  .mini-grid small {
+    color: var(--color-text-muted);
+    font-size: 0.66rem;
+  }
+
+  .dot {
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+  }
+
+  .dot--blue { background: var(--color-secondary); }
+  .dot--orange { background: var(--color-accent); }
+  .dot--green { background: var(--color-primary); }
+
+  .floating-card {
+    position: absolute;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 14rem;
+    padding: 0.85rem;
+    border: 1px solid rgb(255 255 255 / 0.7);
+    border-radius: 1.15rem;
+    background: rgb(255 253 248 / 0.91);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(10px);
+  }
+
+  .floating-card--event {
+    top: 8rem;
+    right: -0.5rem;
+    transform: rotate(-3deg);
+  }
+
+  .floating-card--place {
+    bottom: 4rem;
+    left: -1rem;
+    transform: rotate(2deg);
+  }
+
+  .event-date,
+  .pin {
+    display: grid;
+    width: 2.7rem;
+    height: 2.7rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 0.8rem;
+    color: white;
+    background: var(--color-secondary);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .pin {
+    border-radius: 50%;
+    background: var(--color-accent);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+  }
+
+  .shape {
+    position: absolute;
+    border-radius: 45% 55% 60% 40% / 50% 40% 60% 50%;
+    filter: saturate(0.9);
+  }
+
+  .shape--one {
+    top: 0;
+    right: 0;
+    width: 18rem;
+    height: 18rem;
+    background: color-mix(in srgb, var(--color-secondary) 23%, white);
+    transform: rotate(18deg);
+  }
+
+  .shape--two {
+    bottom: 1.5rem;
+    left: 0;
+    width: 19rem;
+    height: 17rem;
+    background: color-mix(in srgb, var(--color-accent) 20%, var(--color-background));
+    transform: rotate(-12deg);
+  }
+
+  @media (max-width: 64rem) {
+    .preview-wrap {
+      width: min(38rem, 100%);
+      margin-inline: auto;
+    }
+  }
+
+  @media (max-width: 34rem) {
+    .preview-wrap {
+      min-height: 38rem;
+    }
+
+    .phone {
+      top: 2rem;
+      width: 19rem;
+      min-height: 34rem;
+      border-width: 7px;
+    }
+
+    .phone-copy strong {
+      font-size: 1.85rem;
+    }
+
+    .floating-card {
+      width: 12rem;
+    }
+
+    .floating-card--event {
+      top: 5rem;
+      right: -0.35rem;
+    }
+
+    .floating-card--place {
+      bottom: 3rem;
+      left: -0.2rem;
+    }
+  }
+</style>

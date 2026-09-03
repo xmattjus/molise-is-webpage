@@ -1,0 +1,78 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Molise Is, homepage">
+      <img class="brand-icon" src="/app-icon.webp" alt="" width="48" height="48" aria-hidden="true" />
+      <span class="brand-name">Molise Is</span>
+    </a>
+
+    <nav aria-label="Navigazione principale">
+      <a href="/#app">L'app</a>
+      <a href="/#scopri">Scopri</a>
+      <a class="button button--primary header-cta" href="/#download">Scarica l'app</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-block: 1.25rem;
+  }
+
+  .header-inner,
+  nav,
+  .brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .brand {
+    gap: 0.7rem;
+    text-decoration: none;
+  }
+
+  .brand-name {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+  }
+
+  .brand-icon {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+  }
+
+  nav {
+    gap: 1.5rem;
+  }
+
+  nav > a:not(.button) {
+    font-size: 0.9rem;
+    font-weight: 550;
+    text-decoration: none;
+  }
+
+  @media (max-width: 44rem) {
+    nav > a:not(.header-cta) {
+      display: none;
+    }
+
+    .header-cta {
+      min-height: 2.8rem;
+      padding-inline: 1rem;
+      font-size: 0.86rem;
+    }
+  }
+</style>

@@ -1,0 +1,108 @@
+---
+import AppPreview from './AppPreview.astro';
+---
+
+<section class="hero">
+  <div class="hero-orb hero-orb--green" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb--blue" aria-hidden="true"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Molise Is</p>
+      <h1 class="display-title">L'inatteso che ti aspetta</h1>
+      <p class="lede">
+        Posti che non stavi cercando, eventi da vivere e piccole scoperte in tutta la regione.
+        Un modo semplice per sapere cosa c'è intorno a te — e cosa vale il viaggio.
+      </p>
+      <div class="hero-actions">
+        <a class="button button--primary" href="#download">Scarica Molise Is <span aria-hidden="true">→</span></a>
+        <a class="button button--secondary" href="#app">Scopri cosa trovi</a>
+      </div>
+      <p class="availability">Disponibile per iPhone e Android.</p>
+    </div>
+
+    <AppPreview />
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 52rem;
+    padding: 9.5rem 0 4.5rem;
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(25rem, 0.98fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 7rem);
+  }
+
+  .hero-copy {
+    padding-bottom: 2rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .availability {
+    margin: 1rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+    pointer-events: none;
+  }
+
+  .hero-orb--green {
+    top: -20rem;
+    left: -15rem;
+    width: 46rem;
+    height: 46rem;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-primary) 18%, transparent), transparent 68%);
+  }
+
+  .hero-orb--blue {
+    right: -17rem;
+    bottom: -22rem;
+    width: 54rem;
+    height: 54rem;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-secondary) 17%, transparent), transparent 68%);
+  }
+
+  @media (max-width: 64rem) {
+    .hero {
+      padding-top: 8.5rem;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+      max-width: 49rem;
+    }
+  }
+
+  @media (max-width: 34rem) {
+    .hero {
+      padding-top: 7.8rem;
+    }
+
+    .hero-actions .button {
+      width: 100%;
+    }
+  }
+</style>
