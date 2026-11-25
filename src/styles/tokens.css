@@ -18,12 +18,12 @@
   --color-border: color-mix(in srgb, var(--brand-ink) 13%, transparent);
 
   /* Material container tokens from the app (FlexSeedScheme) */
-  --color-primary-container: #c8f1dc;
-  --color-on-primary-container: #003624;
-  --color-secondary-container: #cde9f4;
-  --color-on-secondary-container: #002e3a;
-  --color-tertiary-container: #ffdcc7;
-  --color-on-tertiary-container: #3a1100;
+  --color-primary-container: #84f8c3;
+  --color-on-primary-container: #005137;
+  --color-secondary-container: #bde9ff;
+  --color-on-secondary-container: #004d64;
+  --color-tertiary-container: #ffdbcf;
+  --color-on-tertiary-container: #812900;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

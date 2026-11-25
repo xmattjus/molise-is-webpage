@@ -9,12 +9,12 @@ colors:
   surface: "#fffdf8"
   stone: "#6b726d"
   ink: "#17211c"
-  primary-container: "#c8f1dc"
-  on-primary-container: "#003624"
-  secondary-container: "#cde9f4"
-  on-secondary-container: "#002e3a"
-  tertiary-container: "#ffdcc7"
-  on-tertiary-container: "#3a1100"
+  primary-container: "#84f8c3"
+  on-primary-container: "#005137"
+  secondary-container: "#bde9ff"
+  on-secondary-container: "#004d64"
+  tertiary-container: "#ffdbcf"
+  on-tertiary-container: "#812900"
 typography:
   display:
     fontFamily: "Fraunces, Georgia, serif"
@@ -129,8 +129,8 @@ A warm, earthy palette: three accents taken from the region's landscape, set on 
 - **Border:** ink at 13% opacity (`color-mix(in srgb, ink 13%, transparent)`) for hairlines and outlines.
 
 ### Containers (shared with the app)
-- **Primary / Secondary / Tertiary container** (`primary-container`, `secondary-container`, `tertiary-container`): pale backgrounds for the three feature cards (Luoghi, Eventi, Le tue scoperte), one accent per card. These are the app's Material tokens (FlexSeedScheme), not site-made tints.
-- **On-container** (`on-primary-container`, `on-secondary-container`, `on-tertiary-container`): the text colour on each container: a deep shade of the same hue, never neutral Ink. Secondary text on a container is the on-container colour at 72%.
+- **Primary / Secondary / Tertiary container** (`primary-container`, `secondary-container`, `tertiary-container`): pale backgrounds for the three feature cards (Luoghi, Eventi, Le tue scoperte), one accent per card. These are the app's Material tokens from `SeedColorScheme.fromSeeds` (FlexSeedScheme, seeds Forest, Adriatic and Terra), not site-made tints.
+- **On-container** (`on-primary-container`, `on-secondary-container`, `on-tertiary-container`): the text colour on each container: a deep shade of the same hue, never neutral Ink. Body text on a container uses the on-container colour at full strength: faded to 72% it drops to about 3.8:1, below WCAG AA.
 
 **The Same Tokens As The App Rule.** Any tinted surface uses the app's Material container tokens and its matching on-container text, so the site and the app screenshots read as one product. Ivory stays the page background by choice, even though the app's surface is a cooler green-white.
 

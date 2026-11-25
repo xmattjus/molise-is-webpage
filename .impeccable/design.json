@@ -10,15 +10,20 @@
         "canonical": "#087a55",
         "oklch": "oklch(51.4% 0.109 163)",
         "tonalRamp": [
-          "#050e09",
-          "#082e1f",
-          "#045238",
-          "#057954",
-          "#439d77",
-          "#83bda1",
-          "#b9dac9",
-          "#e4f3eb"
-        ]
+          "#002114",
+          "#005137",
+          "#67dca9",
+          "#84f8c3",
+          "#ffffff"
+        ],
+        "tonalRampTones": [
+          "P10",
+          "P30",
+          "P80",
+          "P90",
+          "P100"
+        ],
+        "tonalRampSource": "App FlexSeedScheme export (only the tones it lists)"
       },
       "adriatic": {
         "role": "secondary",
@@ -26,15 +31,22 @@
         "canonical": "#176b87",
         "oklch": "oklch(49.3% 0.087 226)",
         "tonalRamp": [
-          "#050c10",
-          "#0d2a36",
-          "#124c60",
-          "#1e708c",
-          "#4c94b0",
-          "#87b6ca",
-          "#bad6e2",
-          "#e5f1f6"
-        ]
+          "#001f2a",
+          "#004d64",
+          "#0d6682",
+          "#8ad0ef",
+          "#bde9ff",
+          "#ffffff"
+        ],
+        "tonalRampTones": [
+          "S10",
+          "S30",
+          "S40",
+          "S80",
+          "S90",
+          "S100"
+        ],
+        "tonalRampSource": "App FlexSeedScheme export (only the tones it lists)"
       },
       "terra-cotta": {
         "role": "tertiary",
@@ -42,15 +54,22 @@
         "canonical": "#b84e23",
         "oklch": "oklch(55.5% 0.148 41)",
         "tonalRamp": [
-          "#140704",
-          "#411808",
-          "#742a09",
-          "#a94011",
-          "#cf6740",
-          "#e3997e",
-          "#f4c5b4",
-          "#ffe9e2"
-        ]
+          "#380d00",
+          "#812900",
+          "#a23e14",
+          "#ffb59b",
+          "#ffdbcf",
+          "#ffffff"
+        ],
+        "tonalRampTones": [
+          "T10",
+          "T30",
+          "T40",
+          "T80",
+          "T90",
+          "T100"
+        ],
+        "tonalRampSource": "App FlexSeedScheme export (only the tones it lists)"
       },
       "ivory": {
         "role": "neutral",
@@ -119,38 +138,72 @@
       "primary-container": {
         "role": "container",
         "displayName": "Primary Container",
-        "canonical": "#c8f1dc",
+        "canonical": "#84f8c3",
         "source": "App Material token (FlexSeedScheme)"
       },
       "on-primary-container": {
         "role": "container",
         "displayName": "On Primary Container",
-        "canonical": "#003624",
+        "canonical": "#005137",
         "source": "App Material token (FlexSeedScheme)"
       },
       "secondary-container": {
         "role": "container",
         "displayName": "Secondary Container",
-        "canonical": "#cde9f4",
+        "canonical": "#bde9ff",
         "source": "App Material token (FlexSeedScheme)"
       },
       "on-secondary-container": {
         "role": "container",
         "displayName": "On Secondary Container",
-        "canonical": "#002e3a",
+        "canonical": "#004d64",
         "source": "App Material token (FlexSeedScheme)"
       },
       "tertiary-container": {
         "role": "container",
         "displayName": "Tertiary Container",
-        "canonical": "#ffdcc7",
+        "canonical": "#ffdbcf",
         "source": "App Material token (FlexSeedScheme)"
       },
       "on-tertiary-container": {
         "role": "container",
         "displayName": "On Tertiary Container",
-        "canonical": "#3a1100",
+        "canonical": "#812900",
         "source": "App Material token (FlexSeedScheme)"
+      },
+      "app-surface": {
+        "role": "neutral",
+        "displayName": "App Surface",
+        "canonical": "#f5fbf5",
+        "source": "App FlexSeedScheme export; the site keeps Ivory instead",
+        "tonalRamp": [
+          "#171d19",
+          "#2c322e",
+          "#404943",
+          "#707973",
+          "#bfc9c1",
+          "#d6dbd6",
+          "#dee4de",
+          "#e4eae4",
+          "#eaefe9",
+          "#eff5ef",
+          "#f5fbf5",
+          "#ffffff"
+        ],
+        "tonalRampTones": [
+          "N10",
+          "N20",
+          "NV30",
+          "NV50",
+          "NV80",
+          "N87",
+          "N90",
+          "N92",
+          "N94",
+          "N96",
+          "N98",
+          "N100"
+        ]
       }
     },
     "typographyMeta": {
@@ -274,7 +327,7 @@
       "refersTo": "feature-card",
       "description": "Tinted card for one app capability, number on top, title and text at the bottom.",
       "html": "<article class=\"ds-feature\"><span class=\"ds-feature-num\">01</span><div><h3>Luoghi</h3><p>Borghi, natura, punti panoramici e piccole realtà da tenere a portata di mano.</p></div></article>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-feature{display:flex;min-height:20rem;max-width:22rem;flex-direction:column;justify-content:space-between;padding:2rem;border-radius:2rem;color:#003624;background:#c8f1dc;font-family:var(--font-body);line-height:1.65;}.ds-feature-num{font-family:var(--font-display);font-size:1.2rem;font-weight:650;}.ds-feature h3{margin:0;font-family:var(--font-display);font-size:3rem;font-weight:650;letter-spacing:-.04em;line-height:1;}.ds-feature p{margin:.75rem 0 0;color:color-mix(in srgb,currentColor 72%,transparent);}"
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-feature{display:flex;min-height:20rem;max-width:22rem;flex-direction:column;justify-content:space-between;padding:2rem;border-radius:2rem;color:#005137;background:#84f8c3;font-family:var(--font-body);line-height:1.65;}.ds-feature-num{font-family:var(--font-display);font-size:1.2rem;font-weight:650;}.ds-feature h3{margin:0;font-family:var(--font-display);font-size:3rem;font-weight:650;letter-spacing:-.04em;line-height:1;}.ds-feature p{margin:.75rem 0 0;}"
     },
     {
       "name": "Header Navigation",
