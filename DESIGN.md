@@ -132,7 +132,7 @@ A warm, earthy palette: three accents taken from the region's landscape, set on 
 - **Primary / Secondary / Tertiary container** (`primary-container`, `secondary-container`, `tertiary-container`): pale backgrounds for the three feature cards (Luoghi, Eventi, Le tue scoperte), one accent per card. These are the app's Material tokens from `SeedColorScheme.fromSeeds` (FlexSeedScheme, seeds Forest, Adriatic and Terra), not site-made tints.
 - **On-container** (`on-primary-container`, `on-secondary-container`, `on-tertiary-container`): the text colour on each container: a deep shade of the same hue, never neutral Ink. Body text on a container uses the on-container colour at full strength: faded to 72% it drops to about 3.8:1, below WCAG AA.
 
-**The Same Tokens As The App Rule.** Any tinted surface uses the app's Material container tokens and its matching on-container text, so the site and the app screenshots read as one product. Ivory stays the page background by choice, even though the app's surface is a cooler green-white.
+**The Same Tokens As The App Rule.** Any tinted surface uses the app's Material container tokens and its matching on-container text, so the site and the app screenshots read as one product. Ivory stays the page background by choice, even though the app's surface is a cooler green-white. The site is light-only; the app's dark scheme is recorded in `.impeccable/design.json` (`appDarkScheme`) for a future dark mode.
 
 ### Named Rules
 **The Terracotta Pinch Rule.** Terra Cotta is used sparingly, for labels, pins, badges and callouts (the brand guide's "accenti, callout, badge"). It is never the primary call to action: that is Forest.

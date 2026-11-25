@@ -11,14 +11,18 @@
         "oklch": "oklch(51.4% 0.109 163)",
         "tonalRamp": [
           "#002114",
+          "#003825",
           "#005137",
+          "#006c4a",
           "#67dca9",
           "#84f8c3",
           "#ffffff"
         ],
         "tonalRampTones": [
           "P10",
+          "P20",
           "P30",
+          "P40",
           "P80",
           "P90",
           "P100"
@@ -32,6 +36,7 @@
         "oklch": "oklch(49.3% 0.087 226)",
         "tonalRamp": [
           "#001f2a",
+          "#003546",
           "#004d64",
           "#0d6682",
           "#8ad0ef",
@@ -40,6 +45,7 @@
         ],
         "tonalRampTones": [
           "S10",
+          "S20",
           "S30",
           "S40",
           "S80",
@@ -55,6 +61,7 @@
         "oklch": "oklch(55.5% 0.148 41)",
         "tonalRamp": [
           "#380d00",
+          "#5b1a00",
           "#812900",
           "#a23e14",
           "#ffb59b",
@@ -63,6 +70,7 @@
         ],
         "tonalRampTones": [
           "T10",
+          "T20",
           "T30",
           "T40",
           "T80",
@@ -177,10 +185,17 @@
         "canonical": "#f5fbf5",
         "source": "App FlexSeedScheme export; the site keeps Ivory instead",
         "tonalRamp": [
+          "#0a0f0c",
+          "#0f1511",
           "#171d19",
+          "#1b211d",
+          "#252b28",
           "#2c322e",
+          "#303632",
+          "#353b37",
           "#404943",
           "#707973",
+          "#8a938c",
           "#bfc9c1",
           "#d6dbd6",
           "#dee4de",
@@ -191,10 +206,17 @@
           "#ffffff"
         ],
         "tonalRampTones": [
+          "N4",
+          "N6",
           "N10",
+          "N12",
+          "N17",
           "N20",
+          "N22",
+          "N24",
           "NV30",
           "NV50",
+          "N60",
           "NV80",
           "N87",
           "N90",
@@ -286,7 +308,40 @@
         "name": "hero-stack",
         "value": "64rem"
       }
-    ]
+    ],
+    "appDarkScheme": {
+      "source": "App FlexSeedScheme export, dark theme. The site is light-only; use these if a dark mode is added.",
+      "primary": "#67dca9",
+      "onPrimary": "#002114",
+      "primaryContainer": "#003825",
+      "onPrimaryContainer": "#84f8c3",
+      "secondary": "#8ad0ef",
+      "onSecondary": "#003546",
+      "secondaryContainer": "#004d64",
+      "onSecondaryContainer": "#bde9ff",
+      "tertiary": "#ffb59b",
+      "onTertiary": "#5b1a00",
+      "tertiaryContainer": "#812900",
+      "onTertiaryContainer": "#ffdbcf",
+      "error": "#ffb4ab",
+      "onError": "#690005",
+      "errorContainer": "#93000a",
+      "onErrorContainer": "#ffdad6",
+      "surface": "#0f1511",
+      "onSurface": "#dee4de",
+      "surfaceContainerLowest": "#0a0f0c",
+      "surfaceContainerLow": "#171d19",
+      "surfaceContainer": "#1b211d",
+      "surfaceContainerHigh": "#252b28",
+      "surfaceContainerHighest": "#303632",
+      "surfaceBright": "#353b37",
+      "onSurfaceVariant": "#bfc9c1",
+      "outline": "#8a938c",
+      "outlineVariant": "#404943",
+      "inverseSurface": "#dee4de",
+      "onInverseSurface": "#2c322e",
+      "inversePrimary": "#006c4a"
+    }
   },
   "components": [
     {
