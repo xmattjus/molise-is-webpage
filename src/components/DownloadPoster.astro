@@ -16,8 +16,10 @@ import detail from '../assets/screenshots/smartphone-5.png';
         <StoreBadges />
       </div>
     </div>
-    <div class="screen">
+    <div class="slot">
+      <div class="screen">
       <Image src={detail} alt="La scheda di Villa Princeton a Pettoranello del Molise nell'app, con descrizione e indicazioni" widths={[260, 400, 520]} sizes="(max-width: 46rem) 60vw, 16rem" />
+      </div>
     </div>
   </div>
 </section>
@@ -33,7 +35,6 @@ import detail from '../assets/screenshots/smartphone-5.png';
     align-items: end;
     gap: clamp(2rem, 6vw, 5rem);
     padding: clamp(2.25rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 4.5rem) 0;
-    overflow: hidden;
   }
 
   .final .strip {
@@ -49,7 +50,7 @@ import detail from '../assets/screenshots/smartphone-5.png';
     max-width: 7ch;
   }
 
-    .info {
+  .info {
     width: fit-content;
     max-width: 100%;
     margin-top: 2rem;
@@ -58,7 +59,13 @@ import detail from '../assets/screenshots/smartphone-5.png';
     background: var(--color-sheet);
   }
 
-  /* The screen rises from the poster's bottom edge */
+  /* The screen rises from the poster's bottom edge; only this slot clips, so strips stay on top */
+  .slot {
+    overflow: hidden;
+    padding: 1.5rem 1rem 0;
+    margin-inline: -1rem;
+  }
+
   .screen {
     border-bottom: 0;
     border-radius: var(--radius-screen) var(--radius-screen) 0 0;
@@ -81,8 +88,8 @@ import detail from '../assets/screenshots/smartphone-5.png';
       padding-bottom: 0;
     }
 
-    .screen {
-      width: min(70%, 16rem);
+    .slot {
+      width: min(80%, 18rem);
       justify-self: center;
     }
   }
