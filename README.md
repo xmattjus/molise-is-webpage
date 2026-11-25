@@ -36,8 +36,19 @@ In alternativa usa direttamente Node.js `22.12.0` o superiore.
 
 ## Build
 
+Le pagine di luoghi, eventi e categorie vengono generate leggendo i dati dell'app da Supabase durante la build. Serve la chiave publishable (anon) del progetto, in sola lettura:
+
 ```bash
+cp .env.example .env   # poi inserisci SUPABASE_KEY
 npm run build
+```
+
+Senza `SUPABASE_KEY` la build si ferma con un errore esplicito. Su Cloudflare Workers Builds la variabile va impostata tra le variabili di build del progetto. I dati vengono letti solo alla build: per aggiornare il sito dopo una modifica su Supabase serve una nuova build.
+
+Test delle funzioni di supporto:
+
+```bash
+npm test
 ```
 
 Il risultato statico viene generato in `dist/` e viene pubblicato tramite Cloudflare Workers Static Assets.
@@ -45,6 +56,9 @@ Il risultato statico viene generato in `dist/` e viene pubblicato tramite Cloudf
 ## Route
 
 - `/` — landing page
+- `/luoghi/{slug}/` — un luogo (solo quelli con descrizione)
+- `/eventi/` e `/eventi/{slug}/` — elenco e dettaglio eventi (senza descrizione: `noindex`)
+- `/scopri/{categoria}/` — luoghi ed eventi per categoria
 - `/privacy-policy` — struttura predisposta per la privacy policy definitiva
 - `/termini-e-condizioni` — struttura predisposta per i termini e condizioni definitivi
 

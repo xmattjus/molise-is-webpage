@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import ContentDetail from '../../components/ContentDetail.astro';
+import DownloadPoster from '../../components/DownloadPoster.astro';
+import Footer from '../../components/Footer.astro';
+import { categories, excerpt, imageUrl, isPublishedPlace, loadContent, type Place } from '../../lib/content';
+import { itemStructuredData } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const { places } = await loadContent();
+  return places.filter(isPublishedPlace).map((place) => ({ params: { slug: place.slug }, props: { place } }));
+}
+
+const { place } = Astro.props as { place: Place };
+const city = place.cities?.name;
+const cat = place.category === 'unknown' ? undefined : categories[place.category];
+const title = `${place.name}${city ? ` a ${city}` : ''} — Molise Is`;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<BaseLayout
+  title={title}
+  description={excerpt(place.description) || `${place.name}, ${cat?.label ?? 'luogo'} in Molise.`}
+  image={place.media[0] && imageUrl(place.media[0].url, 1200)}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(itemStructuredData(place, url))} />
+  <Header />
+  <main>
+    <ContentDetail item={place} />
+    <DownloadPoster />
+  </main>
+  <Footer />
+</BaseLayout>

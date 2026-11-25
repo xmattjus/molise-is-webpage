@@ -1,0 +1,26 @@
+---
+import ItemCard from './ItemCard.astro';
+import type { Event, Place } from '../lib/content';
+
+interface Props {
+  items: (Place | Event)[];
+  label: string;
+}
+
+const { items, label } = Astro.props;
+---
+
+<ul class="list" aria-label={label}>
+  {items.map((item, i) => <ItemCard item={item} index={i} />)}
+</ul>
+
+<style>
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import ItemList from '../../components/ItemList.astro';
+import DownloadPoster from '../../components/DownloadPoster.astro';
+import Footer from '../../components/Footer.astro';
+import { isPast, loadContent } from '../../lib/content';
+
+const { events } = await loadContent();
+const upcoming = events.filter((e) => !isPast(e)).reverse();
+const past = events.filter((e) => isPast(e));
+---
+
+<BaseLayout
+  title="Eventi in Molise: sagre, feste e appuntamenti — Molise Is"
+  description="Sagre, feste e appuntamenti in tutto il Molise: gli eventi in programma e quelli passati, con date, luoghi e indicazioni."
+>
+  <Header />
+  <main class="container page">
+    <h1 class="headline">Eventi in Molise</h1>
+    <p class="lede">Sagre, feste e appuntamenti in tutta la regione, con date, luoghi e indicazioni per arrivarci.</p>
+
+    <section aria-labelledby="upcoming">
+      <h2 id="upcoming" class="section-title">In programma</h2>
+      {upcoming.length > 0 ? (
+        <ItemList items={upcoming} label="Eventi in programma" />
+      ) : (
+        <div class="poster poster--sheet empty" style="--tilt:-0.6deg">
+          <p>Al momento non ci sono eventi in programma qui. Scarica l'app per vederli appena vengono pubblicati.</p>
+        </div>
+      )}
+    </section>
+
+    {past.length > 0 && (
+      <section aria-labelledby="past">
+        <h2 id="past" class="section-title">Eventi passati</h2>
+        <ItemList items={past} label="Eventi passati" />
+      </section>
+    )}
+  </main>
+  <DownloadPoster />
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem);
+  }
+
+  .headline {
+    max-width: 12ch;
+  }
+
+  .section-title {
+    margin: clamp(3rem, 7vw, 5rem) 0 1.5rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 850;
+    letter-spacing: -0.02em;
+  }
+
+  .empty {
+    max-width: 34rem;
+    padding: 1.25rem 1.4rem;
+  }
+
+  .empty p {
+    margin: 0;
+  }
+</style>

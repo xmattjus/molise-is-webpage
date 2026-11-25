@@ -1,15 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import categories from '../assets/screenshots/tablet-3.png';
+import tabletShot from '../assets/screenshots/tablet-3.png';
 
-const strips = [
-  { label: 'Natura', tone: 'mint', tilt: '-3deg' },
-  { label: 'Storia', tone: 'peach', tilt: '2deg' },
-  { label: 'Folklore', tone: 'sky', tilt: '-1.5deg' },
-  { label: 'Cibo', tone: 'peach', tilt: '3deg' },
-  { label: 'Attrazioni', tone: 'sky', tilt: '-2deg' },
-  { label: 'Esperienze', tone: 'mint', tilt: '1.5deg' },
-];
+import { categories } from '../lib/content';
+
+const tilts = ['-3deg', '2deg', '-1.5deg', '3deg', '-2deg', '1.5deg'];
+const strips = Object.values(categories).map((c, i) => ({ ...c, tilt: tilts[i] }));
 ---
 
 <section id="scopri" class="discover container" aria-labelledby="discover-title">
@@ -20,10 +16,10 @@ const strips = [
       chiede di vedere tutto: ti mette sulla strada giusta.
     </p>
 
-    <p class="tag list-label" id="categorie">Le categorie dell'app</p>
+    <p class="tag list-label" id="categorie">Sfoglia per categoria</p>
     <ul class="strips" aria-labelledby="categorie">
       {strips.map((s) => (
-        <li class={`chip chip--${s.tone}`} style={`--tilt:${s.tilt}`}>{s.label}</li>
+        <li><a class={`chip chip--${s.tone}`} href={`/scopri/${s.slug}/`} style={`--tilt:${s.tilt}`}>{s.label}</a></li>
       ))}
     </ul>
 
@@ -35,7 +31,7 @@ const strips = [
 
   <figure class="poster poster--mint tablet" style="--tilt:2deg">
     <div class="screen">
-      <Image src={categories} alt="L'app su tablet: elenco di luoghi con le foto, tra cui l'Abbazia di San Vincenzo al Volturno e il Castello Pignatelli" widths={[480, 720, 960]} sizes="(max-width: 56rem) 90vw, 32rem" />
+      <Image src={tabletShot} alt="L'app su tablet: elenco di luoghi con le foto, tra cui l'Abbazia di San Vincenzo al Volturno e il Castello Pignatelli" widths={[480, 720, 960]} sizes="(max-width: 56rem) 90vw, 32rem" />
     </div>
     <figcaption class="tag">Anche su tablet</figcaption>
   </figure>
@@ -68,21 +64,6 @@ const strips = [
     list-style: none;
   }
 
-  /* Printed labels, flat on the wall: not buttons */
-  .chip {
-    padding: 0.4rem 0.85rem;
-    border-radius: 2px;
-    background-image: var(--grain);
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    rotate: var(--tilt);
-  }
-
-  .chip--mint { color: var(--color-on-primary-container); background-color: var(--color-primary-container); }
-  .chip--sky { color: var(--color-on-secondary-container); background-color: var(--color-secondary-container); }
-  .chip--peach { color: var(--color-on-tertiary-container); background-color: var(--color-tertiary-container); }
 
   .notice {
     max-width: 24rem;

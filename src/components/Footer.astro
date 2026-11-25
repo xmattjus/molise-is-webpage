@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/logo-pin.png';
+import { categories } from '../lib/content';
 ---
 
 <footer class="footer">
@@ -12,6 +13,10 @@ import logo from '../assets/logo-pin.png';
         <p>L'inatteso che ti aspetta</p>
       </div>
     </div>
+    <nav class="footer-links" aria-label="Scopri il Molise">
+      <a href="/eventi/">Eventi</a>
+      {Object.values(categories).map((c) => <a href={`/scopri/${c.slug}/`}>{c.label}</a>)}
+    </nav>
     <nav class="footer-links" aria-label="Informazioni legali">
       <a href="/privacy-policy">Privacy policy</a>
       <a href="/termini-e-condizioni">Termini e condizioni</a>

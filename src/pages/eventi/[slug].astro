@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import ContentDetail from '../../components/ContentDetail.astro';
+import DownloadPoster from '../../components/DownloadPoster.astro';
+import Footer from '../../components/Footer.astro';
+import { eventWhen, excerpt, hasText, imageUrl, loadContent, type Event } from '../../lib/content';
+import { itemStructuredData } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const { events } = await loadContent();
+  return events.map((event) => ({ params: { slug: event.slug }, props: { event } }));
+}
+
+const { event } = Astro.props as { event: Event };
+const city = event.cities?.name;
+const title = `${event.name}${city ? ` a ${city}` : ''} — Molise Is`;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const when = eventWhen(event);
+---
+
+<BaseLayout
+  title={title}
+  description={excerpt(event.description) || `${event.name}${city ? ` a ${city}` : ''}, ${when}.`}
+  image={event.media[0] && imageUrl(event.media[0].url, 1200)}
+  noindex={!hasText(event)}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(itemStructuredData(event, url))} />
+  <Header />
+  <main>
+    <ContentDetail item={event} />
+    <DownloadPoster />
+  </main>
+  <Footer />
+</BaseLayout>
