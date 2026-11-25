@@ -168,9 +168,27 @@ const sheets = [
         animation-range: contain 50% contain 82%;
       }
 
+      /* A sheet's strip shows only once the sheet above has peeled away */
+      .strip--1 {
+        animation: reveal linear both;
+        animation-range: contain 34% contain 42%;
+      }
+
+      .strip--2 {
+        animation: reveal linear both;
+        animation-range: contain 74% contain 82%;
+      }
+
       /* Kept in its own rule: the minifier folds a same-rule timeline into the shorthand, which Chrome rejects */
-      .stack .sheet {
+      .stack .sheet,
+      .stack .sheet .strip {
         animation-timeline: --stack;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
       }
 
       @keyframes peel {
