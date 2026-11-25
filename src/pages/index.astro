@@ -6,9 +6,42 @@ import PosterStack from '../components/PosterStack.astro';
 import Discover from '../components/Discover.astro';
 import DownloadPoster from '../components/DownloadPoster.astro';
 import Footer from '../components/Footer.astro';
+
+const site = 'https://moliseis.it/';
+const appStore = 'https://apps.apple.com/it/app/molise-is/id6747610311';
+const googlePlay = 'https://play.google.com/store/apps/details?id=it.benitomatteobercini.moliseis&hl=it';
+
+// No ratings or reviews: there is no real data to cite yet.
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${site}#website`,
+      url: site,
+      name: 'Molise Is',
+      inLanguage: 'it-IT',
+    },
+    {
+      '@type': 'MobileApplication',
+      '@id': `${site}#app`,
+      name: 'Molise Is',
+      description: "Luoghi, eventi e piccole scoperte da tutto il Molise: mappa dei dintorni, calendario degli eventi, preferiti e segnalazioni.",
+      url: site,
+      image: `${site}og-image.jpg`,
+      operatingSystem: 'iOS, Android',
+      applicationCategory: 'TravelApplication',
+      inLanguage: 'it',
+      installUrl: [appStore, googlePlay],
+      sameAs: [appStore, googlePlay],
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+    },
+  ],
+};
 ---
 
 <BaseLayout>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <Header />
   <main>
     <WallHero />
