@@ -1,21 +1,11 @@
 :root {
-  /* Molise Is brand palette */
+  /* Molise Is brand seeds */
   --brand-forest: #087a55;
   --brand-adriatic: #176b87;
-  --brand-terra-cotta: #b84e23;
+  --brand-terra: #b84e23;
   --brand-ivory: #f7f4ec;
   --brand-stone: #6b726d;
   --brand-ink: #17211c;
-
-  /* Semantic aliases */
-  --color-primary: var(--brand-forest);
-  --color-secondary: var(--brand-adriatic);
-  --color-accent: var(--brand-terra-cotta);
-  --color-background: var(--brand-ivory);
-  --color-surface: #fffdf8;
-  --color-text: var(--brand-ink);
-  --color-text-muted: var(--brand-stone);
-  --color-border: color-mix(in srgb, var(--brand-ink) 13%, transparent);
 
   /* Material container tokens from the app (FlexSeedScheme) */
   --color-primary-container: #84f8c3;
@@ -25,17 +15,26 @@
   --color-tertiary-container: #ffdbcf;
   --color-on-tertiary-container: #812900;
 
+  /* Semantic roles */
+  --color-wall: var(--brand-ivory);
+  --color-sheet: #fffdf8;
+  --color-text: var(--brand-ink);
+  --color-text-muted: var(--brand-stone);
+  --color-border: color-mix(in srgb, var(--brand-ink) 14%, transparent);
+  --color-on-stock: var(--brand-ivory);
+
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  --radius-sm: 0.75rem;
-  --radius-md: 1.25rem;
-  --radius-lg: 2rem;
-  --radius-pill: 999px;
+  /* Paper: posters are sheets, corners barely softened */
+  --radius-paper: 3px;
+  --radius-screen: 1.1rem;
+  --shadow-paper: 0 1px 1px rgb(23 33 28 / 0.1), 0 18px 32px -14px rgb(23 33 28 / 0.32);
+  --shadow-paper-lifted: 0 2px 2px rgb(23 33 28 / 0.1), 0 30px 48px -18px rgb(23 33 28 / 0.4);
 
-  --shadow-soft: 0 22px 60px rgb(23 33 28 / 0.12);
-  --shadow-card: 0 12px 30px rgb(23 33 28 / 0.09);
+  --ease-paste: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --container: 74rem;
-  --section-space: clamp(4.75rem, 9vw, 8.5rem);
+  --container: 76rem;
+  --gutter: clamp(1rem, 3vw, 2rem);
+  --section-space: clamp(5rem, 10vw, 9rem);
 }

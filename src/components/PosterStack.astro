@@ -1,0 +1,192 @@
+---
+import { Image } from 'astro:assets';
+import map from '../assets/screenshots/smartphone-4.png';
+import calendar from '../assets/screenshots/smartphone-6.png';
+import favourites from '../assets/screenshots/smartphone-2.png';
+
+const sheets = [
+  {
+    tone: 'mint',
+    tag: 'Luoghi',
+    title: 'Cosa c’è qui intorno.',
+    text: 'Borghi, castelli, laghi e sentieri sulla mappa dei dintorni. Ogni luogo ha la sua scheda, le foto e le indicazioni per arrivarci.',
+    image: map,
+    alt: 'La mappa dell\'app con i luoghi nei dintorni e la ricerca per tipo e categoria',
+    focus: 'center top',
+    tilt: '-1.5deg',
+  },
+  {
+    tone: 'sky',
+    tag: 'Eventi',
+    title: 'Cosa succede, giorno per giorno.',
+    text: 'Il calendario di sagre, feste e appuntamenti in tutta la regione: oggi, nel weekend, nei prossimi giorni. Tocchi un giorno e vedi cosa c\'è, dove e a che ora.',
+    image: calendar,
+    alt: 'Il calendario eventi dell\'app con gli eventi di un giorno di agosto',
+    focus: 'center 58%',
+    tilt: '1.2deg',
+  },
+  {
+    tone: 'peach',
+    tag: 'Le tue scoperte',
+    title: 'Quello che vuoi ricordare.',
+    text: 'Salva tra i preferiti i posti che ti hanno colpito. E se ne manca uno che merita di esserci, suggeriscilo dall\'app.',
+    image: favourites,
+    alt: 'L\'elenco dei preferiti nell\'app, con luoghi ed eventi salvati',
+    focus: 'center top',
+    tilt: '-0.6deg',
+  },
+];
+---
+
+<section id="app" class="stack-section" aria-labelledby="stack-title">
+  <div class="container intro">
+    <h2 id="stack-title" class="headline">Smetti di inseguire i manifesti.</h2>
+    <p class="lede">
+      Sagre sui muri, eventi sui social, luoghi sparsi tra pagine e passaparola. Molise Is li raccoglie in
+      un posto solo, uno sopra l'altro.
+    </p>
+  </div>
+
+  <div class="stack">
+    <div class="stage container">
+      {sheets.map((sheet, i) => (
+        <article class={`poster poster--${sheet.tone} sheet`} style={`--tilt:${sheet.tilt};--i:${i}`}>
+          <div class="copy">
+            <p class="tag">{sheet.tag}</p>
+            <h3>{sheet.title}</h3>
+            <p>{sheet.text}</p>
+          </div>
+          <div class="screen">
+            <Image src={sheet.image} alt={sheet.alt} widths={[280, 420, 560]} sizes="(max-width: 46rem) 70vw, 17rem" style={`object-position:${sheet.focus}`} />
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .stack-section {
+    padding-top: var(--section-space);
+  }
+
+  .intro .headline {
+    max-width: 11ch;
+  }
+
+  .stage {
+    display: grid;
+    gap: clamp(2.5rem, 6vw, 4rem);
+    padding-block: clamp(3rem, 6vw, 4.5rem) var(--section-space);
+  }
+
+  .sheet {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(12rem, 17rem);
+    align-items: center;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    width: min(100%, 58rem);
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .sheet:nth-child(2) {
+    justify-self: end;
+  }
+
+  .sheet:nth-child(3) {
+    justify-self: center;
+  }
+
+  h3 {
+    margin: 0.75rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 850;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+
+  .copy p:not(.tag) {
+    max-width: 30rem;
+    margin: 1rem 0 0;
+    font-size: 1.05rem;
+    text-wrap: pretty;
+  }
+
+  .screen img {
+    aspect-ratio: 10 / 16;
+    object-fit: cover;
+  }
+
+  @media (max-width: 46rem) {
+    .sheet {
+      grid-template-columns: 1fr;
+    }
+
+    .screen {
+      width: min(78%, 17rem);
+      justify-self: center;
+    }
+  }
+
+  /* Signature: the posters peel off the wall one by one as you scroll */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) and (min-width: 52rem) and (min-height: 40rem) {
+      .stack {
+        height: 330vh;
+        view-timeline: --stack block;
+      }
+
+      .stage {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        place-items: center;
+        padding-block: 2rem;
+      }
+
+      .sheet {
+        grid-area: 1 / 1;
+        justify-self: center;
+        z-index: calc(3 - var(--i));
+        transform-origin: 0 0;
+      }
+
+      .sheet:nth-child(1) {
+        animation: peel linear both;
+        animation-range: contain 10% contain 42%;
+      }
+
+      .sheet:nth-child(2) {
+        animation: peel linear both;
+        animation-range: contain 50% contain 82%;
+      }
+
+      /* Kept in its own rule: the minifier folds a same-rule timeline into the shorthand, which Chrome rejects */
+      .stack .sheet {
+        animation-timeline: --stack;
+      }
+
+      @keyframes peel {
+        0% {
+          translate: 0 0;
+          rotate: var(--tilt);
+          box-shadow: var(--shadow-paper);
+        }
+
+        25% {
+          translate: 0 -2vh;
+          rotate: calc(var(--tilt) - 3deg);
+          box-shadow: var(--shadow-paper-lifted);
+        }
+
+        100% {
+          translate: -18% -125vh;
+          rotate: -16deg;
+          box-shadow: var(--shadow-paper-lifted);
+        }
+      }
+    }
+  }
+</style>

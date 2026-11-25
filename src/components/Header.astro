@@ -1,25 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo-pin.png';
+---
+
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="Molise Is, homepage">
-      <img class="brand-icon" src="/app-icon.webp" alt="" width="48" height="48" aria-hidden="true" />
+    <a class="brand" href="/">
+      <Image class="brand-pin" src={logo} alt="" width={30} height={44} loading="eager" />
       <span class="brand-name">Molise Is</span>
     </a>
 
     <nav aria-label="Navigazione principale">
-      <a href="/#app">L'app</a>
-      <a href="/#scopri">Scopri</a>
-      <a class="button button--primary header-cta" href="/#download">Scarica l'app</a>
+      <a class="nav-link" href="/#app">L'app</a>
+      <a class="nav-link" href="/#scopri">Scopri</a>
+      <a class="button" href="/#download">Scarica</a>
     </nav>
   </div>
 </header>
 
 <style>
   .site-header {
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    right: 0;
-    left: 0;
     padding-block: 1.25rem;
   }
 
@@ -32,47 +32,43 @@
 
   .header-inner {
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .brand {
-    gap: 0.7rem;
+    gap: 0.6rem;
     text-decoration: none;
+  }
+
+  .brand-pin {
+    width: 1.9rem;
+    height: auto;
   }
 
   .brand-name {
     font-family: var(--font-display);
-    font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: -0.035em;
-  }
-
-  .brand-icon {
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    object-fit: contain;
+    font-size: 1.45rem;
+    font-weight: 850;
+    letter-spacing: -0.03em;
   }
 
   nav {
-    gap: 1.5rem;
+    gap: clamp(1rem, 3vw, 2rem);
   }
 
-  nav > a:not(.button) {
-    font-size: 0.9rem;
-    font-weight: 550;
+  .nav-link {
+    font-size: 0.92rem;
+    font-weight: 500;
     text-decoration: none;
   }
 
-  @media (max-width: 44rem) {
-    nav > a:not(.header-cta) {
-      display: none;
-    }
+  .nav-link:hover {
+    text-decoration: underline;
+  }
 
-    .header-cta {
-      min-height: 2.8rem;
-      padding-inline: 1rem;
-      font-size: 0.86rem;
+  @media (max-width: 40rem) {
+    .nav-link {
+      display: none;
     }
   }
 </style>

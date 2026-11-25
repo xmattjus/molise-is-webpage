@@ -52,12 +52,16 @@ Open decisions:
 - Name: **Molise Is**.
 - Motto: **L'inatteso che ti aspetta**.
 - Voice, from the existing copy: plain, warm, understated, second person (`tu`). The site avoids tourist superlatives and frames Molise as made of detours, festivals (*sagre*), trails, villages and things found almost by chance (*Il Molise non è una lista da completare*).
-- An official logo exists. The app icon is at `public/app-icon.webp`. The site currently uses a CSS wordmark as a prototype stand-in.
+- **Logo (confirmed):** the multicolour map pin with the white silhouette of Molise, the app icon at `public/app-icon.webp`. It is the site logo and the favicon. The emblem drawn in `public/brand-color-system.png` (hills, village, waves) is not the logo.
+- **Typefaces (binding):** Fraunces for titles and Lexend for text, the same as the app.
+- **Colour (binding):** brand seeds Forest `#087A55`, Adriatic `#176B87`, Terra `#B84E23`; Ivory `#F7F4EC` stays the site background; tinted surfaces use the app's Material container tokens (FlexSeedScheme export). Buttons keep the Forest seed.
+- **Store badges:** official Italian badges only (`public/badges/`), used under Apple's and Google's badge guidelines; never redrawn.
+- **Copy:** the site copy may be rewritten for impact, keeping the name, the motto and the voice, and using only true facts.
 
 ## Evidence on Hand
 
-- Real screenshots of the app are available, to replace the CSS-drawn preview in `src/components/AppPreview.astro`. They are not yet in the repository.
-- Photographs of Molise, owned or licensed, are available. They are not yet in the repository.
+- Real app screenshots are in `public/screenshots/` (6 smartphone, 6 tablet, light theme, Italian UI): home with suggestions and categories, map, place detail, favourites, events calendar. They show real places and events (e.g. Basilica Minore dell'Addolorata in Castelpetroso, Villa Princeton in Pettoranello del Molise, Lago Turchese in Castel San Vincenzo, Estatissima 2025) and the categories Natura, Storia, Folklore, Cibo, Attrazioni, Esperienze.
+- Photographs of Molise, owned or licensed, are available but not yet in the repository. The only real photography on hand is inside the app screenshots.
 - The official logo is available (see Brand Commitments).
 - No download counts, store ratings, reviews, testimonials or press are available. Do not invent any of them.
 

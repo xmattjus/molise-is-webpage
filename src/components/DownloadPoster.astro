@@ -1,0 +1,93 @@
+---
+import { Image } from 'astro:assets';
+import StoreBadges from './StoreBadges.astro';
+import detail from '../assets/screenshots/smartphone-5.png';
+---
+
+<section id="download" class="download container" aria-labelledby="download-title">
+  <div class="poster poster--adriatic final" style="--tilt:-0.6deg">
+    <span class="strip" style="--tilt:-5deg">È gratis</span>
+    <div class="copy">
+      <h2 id="download-title" class="display">Il Molise, in tasca.</h2>
+      <p class="lede">
+        La prossima deviazione è già nell'app. Scaricala gratis su iPhone o Android.
+      </p>
+      <div class="info">
+        <StoreBadges />
+      </div>
+    </div>
+    <div class="screen">
+      <Image src={detail} alt="La scheda di Villa Princeton a Pettoranello del Molise nell'app, con descrizione e indicazioni" widths={[260, 400, 520]} sizes="(max-width: 46rem) 60vw, 16rem" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .download {
+    padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+  }
+
+  .final {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(11rem, 16rem);
+    align-items: end;
+    gap: clamp(2rem, 6vw, 5rem);
+    padding: clamp(2.25rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 4.5rem) 0;
+    overflow: hidden;
+  }
+
+  .final .strip {
+    top: 1.5rem;
+    right: -0.75rem;
+  }
+
+  .copy {
+    padding-bottom: clamp(2.25rem, 6vw, 4.5rem);
+  }
+
+  .display {
+    max-width: 7ch;
+  }
+
+  .lede {
+    color: color-mix(in srgb, var(--brand-ivory) 88%, transparent);
+  }
+
+  .info {
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 2rem;
+    padding: 1rem 1.1rem;
+    border-radius: 2px;
+    background: var(--color-sheet);
+  }
+
+  /* The screen rises from the poster's bottom edge */
+  .screen {
+    border-bottom: 0;
+    border-radius: var(--radius-screen) var(--radius-screen) 0 0;
+    rotate: 3deg;
+    translate: 0 1.5rem;
+  }
+
+  .screen img {
+    aspect-ratio: 10 / 15;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  @media (max-width: 46rem) {
+    .final {
+      grid-template-columns: 1fr;
+    }
+
+    .copy {
+      padding-bottom: 0;
+    }
+
+    .screen {
+      width: min(70%, 16rem);
+      justify-self: center;
+    }
+  }
+</style>

@@ -1,0 +1,122 @@
+---
+import { Image } from 'astro:assets';
+import categories from '../assets/screenshots/tablet-3.png';
+
+const strips = [
+  { label: 'Natura', tone: 'forest', tilt: '-3deg' },
+  { label: 'Storia', tone: 'terra', tilt: '2deg' },
+  { label: 'Folklore', tone: 'adriatic', tilt: '-1.5deg' },
+  { label: 'Cibo', tone: 'peach', tilt: '3deg' },
+  { label: 'Attrazioni', tone: 'sky', tilt: '-2deg' },
+  { label: 'Esperienze', tone: 'mint', tilt: '1.5deg' },
+];
+---
+
+<section id="scopri" class="discover container" aria-labelledby="discover-title">
+  <div class="text">
+    <h2 id="discover-title" class="headline">Il Molise non è una lista da completare.</h2>
+    <p class="lede">
+      È fatto di deviazioni, sagre, sentieri, paesi e panorami trovati quasi per caso. Molise Is non ti
+      chiede di vedere tutto: ti mette sulla strada giusta.
+    </p>
+
+    <p class="tag list-label" id="categorie">Sfoglia per categoria</p>
+    <ul class="strips" aria-labelledby="categorie">
+      {strips.map((s) => (
+        <li class={`poster poster--${s.tone}`} style={`--tilt:${s.tilt}`}>{s.label}</li>
+      ))}
+    </ul>
+
+    <aside class="poster poster--sheet notice" style="--tilt:-1deg">
+      <p class="tag">Avviso</p>
+      <p class="notice-title">Manca un posto?</p>
+      <p>Se conosci un luogo o un evento che merita di esserci, suggeriscilo direttamente dall'app.</p>
+    </aside>
+  </div>
+
+  <figure class="poster poster--mint tablet" style="--tilt:2deg">
+    <div class="screen">
+      <Image src={categories} alt="L'app su tablet: elenco di luoghi con le foto, tra cui l'Abbazia di San Vincenzo al Volturno e il Castello Pignatelli" widths={[480, 720, 960]} sizes="(max-width: 56rem) 90vw, 32rem" />
+    </div>
+    <figcaption class="tag">Anche su tablet</figcaption>
+  </figure>
+</section>
+
+<style>
+  .discover {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: clamp(3rem, 7vw, 6rem);
+    padding-block: var(--section-space);
+  }
+
+  .headline {
+    max-width: 12ch;
+  }
+
+  .list-label {
+    margin-top: clamp(2.25rem, 4vw, 3rem);
+    color: var(--color-text-muted);
+  }
+
+  .strips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 0.6rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .strips li {
+    padding: 0.55rem 0.95rem;
+    font-weight: 700;
+  }
+
+  .notice {
+    max-width: 24rem;
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    padding: 1.25rem 1.4rem 1.4rem;
+  }
+
+  .notice .tag {
+    color: var(--brand-terra);
+  }
+
+  .notice-title {
+    margin: 0.4rem 0 0;
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .notice p:last-child {
+    margin: 0.6rem 0 0;
+    color: var(--color-text-muted);
+  }
+
+  .tablet {
+    margin: 0;
+    padding: clamp(0.8rem, 1.5vw, 1.1rem);
+  }
+
+  .tablet .screen img {
+    aspect-ratio: 4 / 4.4;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .tablet figcaption {
+    display: block;
+    margin-top: 0.8rem;
+  }
+
+  @media (max-width: 56rem) {
+    .discover {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
