@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T19:11:16+00:00",
+  "title": "Design System: Molise Is",
+  "extensions": {
+    "colorMeta": {
+      "forest": {
+        "role": "primary",
+        "displayName": "Forest",
+        "canonical": "#087a55",
+        "oklch": "oklch(51.4% 0.109 163)",
+        "tonalRamp": [
+          "#050e09",
+          "#082e1f",
+          "#045238",
+          "#057954",
+          "#439d77",
+          "#83bda1",
+          "#b9dac9",
+          "#e4f3eb"
+        ]
+      },
+      "adriatic": {
+        "role": "secondary",
+        "displayName": "Adriatic",
+        "canonical": "#176b87",
+        "oklch": "oklch(49.3% 0.087 226)",
+        "tonalRamp": [
+          "#050c10",
+          "#0d2a36",
+          "#124c60",
+          "#1e708c",
+          "#4c94b0",
+          "#87b6ca",
+          "#bad6e2",
+          "#e5f1f6"
+        ]
+      },
+      "terra-cotta": {
+        "role": "tertiary",
+        "displayName": "Terra Cotta",
+        "canonical": "#b84e23",
+        "oklch": "oklch(55.5% 0.148 41)",
+        "tonalRamp": [
+          "#140704",
+          "#411808",
+          "#742a09",
+          "#a94011",
+          "#cf6740",
+          "#e3997e",
+          "#f4c5b4",
+          "#ffe9e2"
+        ]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "canonical": "#f7f4ec",
+        "oklch": "oklch(96.7% 0.011 90)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#272624",
+          "#474540",
+          "#68665f",
+          "#8c8982",
+          "#b0aea9",
+          "#d2d1ce",
+          "#efeeed"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#fffdf8",
+        "oklch": "oklch(99.4% 0.007 89)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#272625",
+          "#464542",
+          "#686662",
+          "#8b8985",
+          "#afaeab",
+          "#d2d1cf",
+          "#efeeed"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "#6b726d",
+        "oklch": "oklch(54.4% 0.011 155)",
+        "tonalRamp": [
+          "#0a0b0b",
+          "#242725",
+          "#424643",
+          "#616863",
+          "#848b86",
+          "#aaafac",
+          "#cfd2d0",
+          "#edefee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#17211c",
+        "oklch": "oklch(23.6% 0.017 163)",
+        "tonalRamp": [
+          "#0a0c0b",
+          "#232825",
+          "#3f4743",
+          "#5e6963",
+          "#818c86",
+          "#a8b0ac",
+          "#cdd2d0",
+          "#edefee"
+        ]
+      },
+      "forest-tint": {
+        "role": "tint",
+        "displayName": "Forest Tint",
+        "canonical": "#cce8da",
+        "oklch": "oklch(90.7% 0.035 164)",
+        "tonalRamp": [
+          "#090c0a",
+          "#1f2924",
+          "#384a41",
+          "#546d61",
+          "#779084",
+          "#a1b3aa",
+          "#c9d4ce",
+          "#ebf0ed"
+        ]
+      },
+      "adriatic-tint": {
+        "role": "tint",
+        "displayName": "Adriatic Tint",
+        "canonical": "#c9e3ed",
+        "oklch": "oklch(90.0% 0.031 223)",
+        "tonalRamp": [
+          "#090c0d",
+          "#1f282c",
+          "#38484e",
+          "#536a73",
+          "#778d96",
+          "#a1b1b7",
+          "#c9d3d7",
+          "#ebeff1"
+        ]
+      },
+      "terra-cotta-tint": {
+        "role": "tint",
+        "displayName": "Terra Cotta Tint",
+        "canonical": "#f0d2c3",
+        "oklch": "oklch(88.5% 0.039 48)",
+        "tonalRamp": [
+          "#0e0a09",
+          "#2e241f",
+          "#534037",
+          "#7a6053",
+          "#9d8376",
+          "#bda9a0",
+          "#dacec8",
+          "#f3edeb"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Feature card headings."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Intro paragraphs in Stone."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase terracotta eyebrows."
+      }
+    },
+    "shadows": [
+      {
+        "name": "soft",
+        "value": "0 22px 60px rgb(23 33 28 / 0.12)",
+        "purpose": "Large floating object (phone mock-up)."
+      },
+      {
+        "name": "card",
+        "value": "0 12px 30px rgb(23 33 28 / 0.09)",
+        "purpose": "Small floating cards."
+      },
+      {
+        "name": "button-glow",
+        "value": "0 10px 25px color-mix(in srgb, #087a55 24%, transparent)",
+        "purpose": "Primary button only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "lift",
+        "value": "transform 160ms ease; translateY(-2px)",
+        "purpose": "Hover on buttons and store buttons."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition/animation 0.01ms, scroll-behavior auto",
+        "purpose": "Global under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "store-full",
+        "value": "30rem"
+      },
+      {
+        "name": "mobile",
+        "value": "34rem"
+      },
+      {
+        "name": "footer-stack",
+        "value": "40rem"
+      },
+      {
+        "name": "nav-collapse",
+        "value": "44rem"
+      },
+      {
+        "name": "grid-stack",
+        "value": "52rem"
+      },
+      {
+        "name": "hero-stack",
+        "value": "64rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call to action: download the app.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Scarica Molise Is <span aria-hidden=\"true\">→</span></a>",
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-btn-primary{display:inline-flex;min-height:3.25rem;align-items:center;justify-content:center;gap:.65rem;padding:.8rem 1.25rem;border:1px solid transparent;border-radius:999px;font-family:var(--font-body);font-weight:650;line-height:1;text-decoration:none;transition:transform 160ms ease,background-color 160ms ease,border-color 160ms ease;color:#fff;background:var(--color-primary);box-shadow:0 10px 25px color-mix(in srgb,var(--color-primary) 24%,transparent);}.ds-btn-primary:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--color-primary) 90%,black);}.ds-btn-primary:focus-visible{outline:3px solid color-mix(in srgb,var(--color-secondary) 70%,white);outline-offset:4px;}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Quiet alternative action next to the primary.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Scopri cosa trovi</a>",
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-btn-secondary{display:inline-flex;min-height:3.25rem;align-items:center;justify-content:center;gap:.65rem;padding:.8rem 1.25rem;border:1px solid transparent;border-radius:999px;font-family:var(--font-body);font-weight:650;line-height:1;text-decoration:none;transition:transform 160ms ease,background-color 160ms ease,border-color 160ms ease;color:var(--color-text);border-color:var(--color-border);background:color-mix(in srgb,var(--color-surface) 75%,transparent);}.ds-btn-secondary:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--color-text) 25%,transparent);}.ds-btn-secondary:focus-visible{outline:3px solid color-mix(in srgb,var(--color-secondary) 70%,white);outline-offset:4px;}"
+    },
+    {
+      "name": "Store Button",
+      "kind": "button",
+      "refersTo": "store-button",
+      "description": "App Store / Google Play link on the Forest CTA panel.",
+      "html": "<div class=\"ds-store-wrap\"><a class=\"ds-store\" href=\"#\" aria-label=\"Scarica Molise Is su App Store\"><span aria-hidden=\"true\">●</span><span><small>Scarica su</small><strong>App Store</strong></span></a></div>",
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-store-wrap{padding:1.5rem;background:var(--color-primary);border-radius:2rem;}.ds-store{display:flex;min-width:11.5rem;align-items:center;gap:.75rem;padding:.75rem 1rem;border:1px solid rgb(255 255 255/.28);border-radius:1rem;color:var(--color-text);background:var(--color-background);font-family:var(--font-body);text-decoration:none;transition:transform 160ms ease;}.ds-store:hover{transform:translateY(-2px);}.ds-store:focus-visible{outline:3px solid color-mix(in srgb,var(--color-secondary) 70%,white);outline-offset:4px;}.ds-store small,.ds-store strong{display:block;}.ds-store small{color:var(--color-text-muted);font-size:.58rem;}.ds-store strong{margin-top:-.1rem;font-size:.9rem;}"
+    },
+    {
+      "name": "Eyebrow",
+      "kind": "chip",
+      "refersTo": "label",
+      "description": "Terracotta uppercase label with a leading rule, above every section title.",
+      "html": "<p class=\"ds-eyebrow\">Dentro Molise Is</p>",
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-eyebrow{display:inline-flex;align-items:center;gap:.55rem;margin:0;color:var(--color-accent);font-family:var(--font-body);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}.ds-eyebrow::before{width:1.5rem;height:2px;content:'';background:currentColor;}"
+    },
+    {
+      "name": "Feature Card",
+      "kind": "card",
+      "refersTo": "feature-card",
+      "description": "Tinted card for one app capability, number on top, title and text at the bottom.",
+      "html": "<article class=\"ds-feature\"><span class=\"ds-feature-num\">01</span><div><h3>Luoghi</h3><p>Borghi, natura, punti panoramici e piccole realtà da tenere a portata di mano.</p></div></article>",
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-feature{display:flex;min-height:20rem;max-width:22rem;flex-direction:column;justify-content:space-between;padding:2rem;border-radius:2rem;color:var(--color-text);background:#cce8da;font-family:var(--font-body);line-height:1.65;}.ds-feature-num{font-family:var(--font-display);font-size:1.2rem;font-weight:650;}.ds-feature h3{margin:0;font-family:var(--font-display);font-size:3rem;font-weight:650;letter-spacing:-.04em;line-height:1;}.ds-feature p{margin:.75rem 0 0;color:color-mix(in srgb,var(--color-text) 72%,transparent);}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Transparent header: brand wordmark, text links, pill CTA.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\">Molise Is</a><nav><a href=\"#\">L'app</a><a href=\"#\">Scopri</a><a class=\"ds-nav-cta\" href=\"#\">Scarica l'app</a></nav></header>",
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-nav{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.25rem;background:var(--color-background);color:var(--color-text);font-family:var(--font-body);}.ds-brand{font-family:var(--font-display);font-size:1.35rem;font-weight:700;letter-spacing:-.035em;color:inherit;text-decoration:none;}.ds-nav nav{display:flex;align-items:center;gap:1.5rem;}.ds-nav nav a{color:inherit;font-size:.9rem;font-weight:550;text-decoration:none;}.ds-nav nav a:hover{text-decoration:underline;text-underline-offset:.2em;}.ds-nav nav a:focus-visible{outline:3px solid color-mix(in srgb,var(--color-secondary) 70%,white);outline-offset:4px;}.ds-nav .ds-nav-cta{display:inline-flex;min-height:2.8rem;align-items:center;padding:0 1rem;border-radius:999px;color:#fff;background:var(--color-primary);font-weight:650;}.ds-nav .ds-nav-cta:hover{text-decoration:none;background:color-mix(in srgb,var(--color-primary) 90%,black);}"
+    },
+    {
+      "name": "Floating Card",
+      "kind": "custom",
+      "refersTo": "floating-card",
+      "description": "Small tilted card over the app preview: event date badge plus label.",
+      "html": "<div class=\"ds-float\"><span class=\"ds-date\">14</span><span><small>EVENTO</small><b>Sagra nel borgo</b></span></div>",
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-float{display:flex;align-items:center;gap:.8rem;width:14rem;padding:.85rem;border:1px solid rgb(255 255 255/.7);border-radius:1.15rem;background:rgb(255 253 248/.91);box-shadow:0 12px 30px rgb(23 33 28/.09);font-family:var(--font-body);color:var(--color-text);transform:rotate(-3deg);}.ds-date{display:grid;width:2.7rem;height:2.7rem;place-items:center;border-radius:.8rem;color:#fff;background:var(--color-secondary);font-family:var(--font-display);font-size:1.2rem;font-weight:700;}.ds-float small{display:block;color:var(--color-accent);font-size:.63rem;font-weight:700;letter-spacing:.11em;}.ds-float b{display:block;margin-top:.2rem;font-size:.86rem;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Cartolina dal Borgo",
+    "overview": "The site reads like a postcard sent from a village you have just found: warm ivory paper, a large serif greeting, and the colours of the land and sea of Molise, with forest green, Adriatic blue and roof-tile terracotta. Stylised landscapes (hills, a sun, rows of houses with terracotta roofs) and slightly rotated organic blobs replace stock photography. The result feels familiar and handmade rather than promotional.\n\nThe layout is generous and calm. Sections breathe on large vertical padding, headlines are oversized and tightly set, and body copy stays muted and short. Depth comes from tonal blocks and a few soft shadows, never from glass or glow. Interaction is gentle: elements lift by 2px on hover and nothing flashes.\n\nIt must never look like an institutional portal (crests, banners, dense link grids) or a tech startup (purple gradients, neon dark mode, glassmorphism as a style).",
+    "keyCharacteristics": [
+      "Warm ivory canvas with ink text; one dark ink band for contrast.",
+      "Fraunces display serif at very large sizes with tight negative tracking; Lexend for everything else.",
+      "Three earth-and-sea accents, each with its own pale tint.",
+      "Rounded, organic forms: pill buttons, 2rem cards, irregular blob shapes, a few small rotations.",
+      "Illustration made in CSS shapes, not photographs (until real assets arrive)."
+    ],
+    "rules": [
+      {
+        "name": "The Terracotta Pinch Rule",
+        "body": "Terra Cotta marks labels, pins and roofs. It never fills a button or a panel.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mix, Don't Invent Rule",
+        "body": "New shades come from `color-mix()` on existing tokens (with white, black, ivory or transparent), as the incumbent code does. Do not add new hex values.",
+        "section": "colors"
+      },
+      {
+        "name": "The Short Headline Rule",
+        "body": "Display and section titles are capped in `ch` (9.6ch and 12ch) so they break into two or three stacked lines, like a postcard caption.",
+        "section": "typography"
+      },
+      {
+        "name": "The Serif Speaks, Sans Explains Rule",
+        "body": "Fraunces is for names, titles and numbers. Lexend carries every sentence, button and label.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper, Not Glass Rule",
+        "body": "Depth comes from paper tones and soft shadows. Translucency (`backdrop-filter`) appears only on the small floating cards over illustration, never as a general surface style.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** build every colour from the six brand tokens, their three tints, or `color-mix()` of them.",
+      "**Do** set titles in Fraunces 650 with tight negative tracking and a `ch` max width; keep everything else in Lexend.",
+      "**Do** keep corners generous (pill buttons, 2rem cards) and tilt floating objects by 2–3°.",
+      "**Do** use soft ink-tinted shadows only on elements that float, and keep hover feedback to a 2px lift over 160ms.",
+      "**Do** respect `prefers-reduced-motion` (smooth scroll and transitions off) and keep the visible Adriatic focus ring."
+    ],
+    "donts": [
+      "**Don't** make it look like an institutional portal: no crests, banners, dense link grids or bureaucratic tables.",
+      "**Don't** make it look like a tech startup: no purple gradients, neon dark mode, or glassmorphism as a surface style.",
+      "**Don't** fill buttons or large panels with Terra Cotta; it is for small signals.",
+      "**Don't** introduce sharp corners or hard-edged, heavy drop shadows."
+    ]
+  }
+}
