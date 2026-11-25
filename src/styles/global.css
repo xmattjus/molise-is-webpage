@@ -21,9 +21,7 @@ body {
   min-width: 20rem;
   color: var(--color-text);
   /* Plaster grain: the wall the posters are pasted on */
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .09 0 0 0 0 .13 0 0 0 0 .11 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
-    var(--color-wall);
+  background: var(--grain), var(--color-wall);
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
@@ -108,17 +106,18 @@ button {
 .poster {
   position: relative;
   border-radius: var(--radius-paper);
+  background-image: var(--grain);
   box-shadow: var(--shadow-paper);
   rotate: var(--tilt, 0deg);
 }
 
-.poster--forest { color: var(--color-on-stock); background: var(--brand-forest); }
-.poster--adriatic { color: var(--color-on-stock); background: var(--brand-adriatic); }
-.poster--terra { color: var(--color-on-stock); background: var(--brand-terra); }
-.poster--mint { color: var(--color-on-primary-container); background: var(--color-primary-container); }
-.poster--sky { color: var(--color-on-secondary-container); background: var(--color-secondary-container); }
-.poster--peach { color: var(--color-on-tertiary-container); background: var(--color-tertiary-container); }
-.poster--sheet { color: var(--color-text); background: var(--color-sheet); }
+.poster--forest { color: var(--color-on-stock); background-color: var(--brand-forest); }
+.poster--adriatic { color: var(--color-on-stock); background-color: var(--brand-adriatic); }
+.poster--terra { color: var(--color-on-stock); background-color: var(--brand-terra); }
+.poster--mint { color: var(--color-on-primary-container); background-color: var(--color-primary-container); }
+.poster--sky { color: var(--color-on-secondary-container); background-color: var(--color-secondary-container); }
+.poster--peach { color: var(--color-on-tertiary-container); background-color: var(--color-tertiary-container); }
+.poster--sheet { color: var(--color-text); background-color: var(--color-sheet); }
 
 /* Paste strip: the diagonal band pasted over a poster's corner */
 .strip {

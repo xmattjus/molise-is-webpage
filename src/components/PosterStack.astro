@@ -29,7 +29,7 @@ const sheets = [
     tone: 'peach',
     tag: 'Le tue scoperte',
     title: 'Quello che vuoi ricordare.',
-    text: 'Salva tra i preferiti i posti che ti hanno colpito. E se ne manca uno che merita di esserci, suggeriscilo dall\'app.',
+    text: 'Salva tra i preferiti i posti che ti hanno colpito e gli eventi a cui vuoi andare, e ritrovali quando ti servono.',
     image: favourites,
     alt: 'L\'elenco dei preferiti nell\'app, con luoghi ed eventi salvati',
     focus: 'center top',
@@ -51,8 +51,8 @@ const sheets = [
     <div class="stage container">
       {sheets.map((sheet, i) => (
         <article class={`poster poster--${sheet.tone} sheet`} style={`--tilt:${sheet.tilt};--i:${i}`}>
+          <span class={`strip strip--${i}`}>{sheet.tag}</span>
           <div class="copy">
-            <p class="tag">{sheet.tag}</p>
             <h3>{sheet.title}</h3>
             <p>{sheet.text}</p>
           </div>
@@ -97,8 +97,13 @@ const sheets = [
     justify-self: center;
   }
 
+  /* One corner per sheet, so strips on the sheets underneath never cross */
+  .strip--0 { --tilt: -5deg; top: -0.85rem; left: -0.9rem; }
+  .strip--1 { --tilt: 4deg; top: -0.85rem; right: -0.9rem; }
+  .strip--2 { --tilt: 3deg; bottom: -0.85rem; left: -0.9rem; }
+
   h3 {
-    margin: 0.75rem 0 0;
+    margin: 0;
     font-family: var(--font-display);
     font-size: clamp(2rem, 4vw, 3.4rem);
     font-weight: 850;

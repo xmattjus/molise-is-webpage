@@ -52,7 +52,7 @@ Open decisions:
 - Name: **Molise Is**.
 - Motto: **L'inatteso che ti aspetta**.
 - Voice, from the existing copy: plain, warm, understated, second person (`tu`). The site avoids tourist superlatives and frames Molise as made of detours, festivals (*sagre*), trails, villages and things found almost by chance (*Il Molise non è una lista da completare*).
-- **Logo (confirmed):** the multicolour map pin with the white silhouette of Molise, the app icon at `public/app-icon.webp`. It is the site logo and the favicon. The emblem drawn in `public/brand-color-system.png` (hills, village, waves) is not the logo.
+- **Logo (confirmed):** the multicolour map pin with the white silhouette of Molise, the app icon at `public/app-icon.webp`. It is the site logo and the favicon. The emblem drawn in `docs/brand/brand-color-system.png` (hills, village, waves) is not the logo.
 - **Typefaces (binding):** Fraunces for titles and Lexend for text, the same as the app.
 - **Colour (binding):** brand seeds Forest `#087A55`, Adriatic `#176B87`, Terra `#B84E23`; Ivory `#F7F4EC` stays the site background; tinted surfaces use the app's Material container tokens (FlexSeedScheme export). Buttons keep the Forest seed.
 - **Store badges:** official Italian badges only (`public/badges/`), used under Apple's and Google's badge guidelines; never redrawn.

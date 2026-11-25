@@ -3,9 +3,9 @@ import { Image } from 'astro:assets';
 import categories from '../assets/screenshots/tablet-3.png';
 
 const strips = [
-  { label: 'Natura', tone: 'forest', tilt: '-3deg' },
-  { label: 'Storia', tone: 'terra', tilt: '2deg' },
-  { label: 'Folklore', tone: 'adriatic', tilt: '-1.5deg' },
+  { label: 'Natura', tone: 'mint', tilt: '-3deg' },
+  { label: 'Storia', tone: 'peach', tilt: '2deg' },
+  { label: 'Folklore', tone: 'sky', tilt: '-1.5deg' },
   { label: 'Cibo', tone: 'peach', tilt: '3deg' },
   { label: 'Attrazioni', tone: 'sky', tilt: '-2deg' },
   { label: 'Esperienze', tone: 'mint', tilt: '1.5deg' },
@@ -20,15 +20,14 @@ const strips = [
       chiede di vedere tutto: ti mette sulla strada giusta.
     </p>
 
-    <p class="tag list-label" id="categorie">Sfoglia per categoria</p>
+    <p class="tag list-label" id="categorie">Le categorie dell'app</p>
     <ul class="strips" aria-labelledby="categorie">
       {strips.map((s) => (
-        <li class={`poster poster--${s.tone}`} style={`--tilt:${s.tilt}`}>{s.label}</li>
+        <li class={`chip chip--${s.tone}`} style={`--tilt:${s.tilt}`}>{s.label}</li>
       ))}
     </ul>
 
     <aside class="poster poster--sheet notice" style="--tilt:-1deg">
-      <p class="tag">Avviso</p>
       <p class="notice-title">Manca un posto?</p>
       <p>Se conosci un luogo o un evento che merita di esserci, suggeriscilo direttamente dall'app.</p>
     </aside>
@@ -69,10 +68,21 @@ const strips = [
     list-style: none;
   }
 
-  .strips li {
-    padding: 0.55rem 0.95rem;
+  /* Printed labels, flat on the wall: not buttons */
+  .chip {
+    padding: 0.4rem 0.85rem;
+    border-radius: 2px;
+    background-image: var(--grain);
+    font-family: var(--font-display);
+    font-size: 1.25rem;
     font-weight: 700;
+    letter-spacing: -0.01em;
+    rotate: var(--tilt);
   }
+
+  .chip--mint { color: var(--color-on-primary-container); background-color: var(--color-primary-container); }
+  .chip--sky { color: var(--color-on-secondary-container); background-color: var(--color-secondary-container); }
+  .chip--peach { color: var(--color-on-tertiary-container); background-color: var(--color-tertiary-container); }
 
   .notice {
     max-width: 24rem;
@@ -80,12 +90,8 @@ const strips = [
     padding: 1.25rem 1.4rem 1.4rem;
   }
 
-  .notice .tag {
-    color: var(--brand-terra);
-  }
-
   .notice-title {
-    margin: 0.4rem 0 0;
+    margin: 0;
     font-family: var(--font-display);
     font-size: 1.7rem;
     font-weight: 850;

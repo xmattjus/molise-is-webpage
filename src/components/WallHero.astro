@@ -6,15 +6,16 @@ import home from '../assets/screenshots/smartphone-1.png';
 
 <section class="hero container" aria-labelledby="hero-title">
   <div class="wall">
+    <div class="poster poster--adriatic under under-a" aria-hidden="true" style="--tilt:-4deg"></div>
+    <div class="poster poster--peach under under-b" aria-hidden="true" style="--tilt:5deg"></div>
+    <div class="poster poster--sheet under under-c" aria-hidden="true" style="--tilt:2deg"></div>
     <div class="poster poster--forest main paste" style="--tilt:-0.8deg;--order:0">
       <span class="strip" style="--tilt:5deg">Gratis su iPhone e Android</span>
       <h1 id="hero-title" class="display"><span class="kern">L’</span>inatteso che ti aspetta.</h1>
       <p class="lede">
-        Luoghi, eventi e piccole scoperte da tutto il Molise, in un'app sola. Apri, guarda cosa c'è
-        intorno a te, parti.
+        Luoghi, eventi e piccole scoperte da tutto il Molise, in un'app sola.
       </p>
       <div class="info" id="download-hero">
-        <p class="tag">Scarica l'app</p>
         <StoreBadges />
       </div>
     </div>
@@ -27,15 +28,13 @@ import home from '../assets/screenshots/smartphone-1.png';
     </figure>
 
     <div class="poster poster--mint place paste" style="--tilt:-3deg;--order:2">
-      <p class="tag">Luogo</p>
       <p class="name">Lago Turchese</p>
-      <p class="where">Castel San Vincenzo</p>
+      <p class="where">Luogo · Castel San Vincenzo</p>
     </div>
 
     <div class="poster poster--terra event paste" style="--tilt:3.5deg;--order:3">
-      <p class="tag">Evento</p>
       <p class="name">’Ndocciata</p>
-      <p class="where">Agnone</p>
+      <p class="where">Evento · Agnone</p>
     </div>
   </div>
 </section>
@@ -50,6 +49,32 @@ import home from '../assets/screenshots/smartphone-1.png';
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: auto auto;
     align-items: start;
+  }
+
+  /* Older sheets underneath: only their edges show */
+  .under {
+    z-index: 0;
+    grid-row: 1;
+    box-shadow: 0 1px 1px rgb(23 33 28 / 0.08);
+  }
+
+  .under-a {
+    grid-column: 1 / 5;
+    height: 55%;
+    margin: -1.1rem 0 0 -1.4rem;
+  }
+
+  .under-b {
+    grid-column: 9 / 13;
+    height: 18rem;
+    margin: 1.75rem -0.5rem 0 1rem;
+  }
+
+  .under-c {
+    grid-column: 5 / 8;
+    height: 9rem;
+    align-self: end;
+    margin: 0 -1rem -1.3rem 0;
   }
 
   .main {
@@ -162,6 +187,11 @@ import home from '../assets/screenshots/smartphone-1.png';
   }
 
   @media (max-width: 46rem) {
+    .under-b,
+    .under-c {
+      display: none;
+    }
+
     .wall {
       grid-template-rows: auto auto auto;
     }

@@ -110,7 +110,7 @@ It must never look like an institutional portal (crests, banners, dense link gri
 
 ## Colors
 
-A warm, earthy palette: three accents taken from the region's landscape, set on ivory paper with near-black green ink. The brand colour guide (`public/brand-color-system.png`) is the source of these values and their hierarchy: Forest primary, Adriatic secondary, Terra tertiary, used sparingly.
+A warm, earthy palette: three accents taken from the region's landscape, set on ivory paper with near-black green ink. The brand colour guide (`docs/brand/brand-color-system.png`) is the source of these values and their hierarchy: Forest primary, Adriatic secondary, Terra tertiary, used sparingly.
 
 ### Primary
 - **Forest** (`forest`): the brand's voice. Primary buttons, the download panel, the user avatar and the featured card in the app preview, the front hill in the landscape, and text selection.
