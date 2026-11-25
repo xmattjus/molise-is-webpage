@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-25T19:11:16+00:00",
+  "generatedAt": "2026-11-25T20:08:30+00:00",
   "title": "Design System: Molise Is",
   "extensions": {
     "colorMeta": {
@@ -79,111 +79,11 @@
         ],
         "tonalRampSource": "App FlexSeedScheme export (only the tones it lists)"
       },
-      "ivory": {
-        "role": "neutral",
-        "displayName": "Ivory",
-        "canonical": "#f7f4ec",
-        "oklch": "oklch(96.7% 0.011 90)",
-        "tonalRamp": [
-          "#0b0b0a",
-          "#272624",
-          "#474540",
-          "#68665f",
-          "#8c8982",
-          "#b0aea9",
-          "#d2d1ce",
-          "#efeeed"
-        ]
-      },
-      "surface": {
-        "role": "neutral",
-        "displayName": "Surface",
-        "canonical": "#fffdf8",
-        "oklch": "oklch(99.4% 0.007 89)",
-        "tonalRamp": [
-          "#0b0b0b",
-          "#272625",
-          "#464542",
-          "#686662",
-          "#8b8985",
-          "#afaeab",
-          "#d2d1cf",
-          "#efeeed"
-        ]
-      },
-      "stone": {
-        "role": "neutral",
-        "displayName": "Stone",
-        "canonical": "#6b726d",
-        "oklch": "oklch(54.4% 0.011 155)",
-        "tonalRamp": [
-          "#0a0b0b",
-          "#242725",
-          "#424643",
-          "#616863",
-          "#848b86",
-          "#aaafac",
-          "#cfd2d0",
-          "#edefee"
-        ]
-      },
-      "ink": {
-        "role": "neutral",
-        "displayName": "Ink",
-        "canonical": "#17211c",
-        "oklch": "oklch(23.6% 0.017 163)",
-        "tonalRamp": [
-          "#0a0c0b",
-          "#232825",
-          "#3f4743",
-          "#5e6963",
-          "#818c86",
-          "#a8b0ac",
-          "#cdd2d0",
-          "#edefee"
-        ]
-      },
-      "primary-container": {
-        "role": "container",
-        "displayName": "Primary Container",
-        "canonical": "#84f8c3",
-        "source": "App Material token (FlexSeedScheme)"
-      },
-      "on-primary-container": {
-        "role": "container",
-        "displayName": "On Primary Container",
-        "canonical": "#005137",
-        "source": "App Material token (FlexSeedScheme)"
-      },
-      "secondary-container": {
-        "role": "container",
-        "displayName": "Secondary Container",
-        "canonical": "#bde9ff",
-        "source": "App Material token (FlexSeedScheme)"
-      },
-      "on-secondary-container": {
-        "role": "container",
-        "displayName": "On Secondary Container",
-        "canonical": "#004d64",
-        "source": "App Material token (FlexSeedScheme)"
-      },
-      "tertiary-container": {
-        "role": "container",
-        "displayName": "Tertiary Container",
-        "canonical": "#ffdbcf",
-        "source": "App Material token (FlexSeedScheme)"
-      },
-      "on-tertiary-container": {
-        "role": "container",
-        "displayName": "On Tertiary Container",
-        "canonical": "#812900",
-        "source": "App Material token (FlexSeedScheme)"
-      },
       "app-surface": {
         "role": "neutral",
         "displayName": "App Surface",
         "canonical": "#f5fbf5",
-        "source": "App FlexSeedScheme export; the site keeps Ivory instead",
+        "source": "App FlexSeedScheme export; on the site it backs printed screenshots only, Ivory stays the wall",
         "tonalRamp": [
           "#0a0f0c",
           "#0f1511",
@@ -226,56 +126,145 @@
           "N98",
           "N100"
         ]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory Plaster",
+        "canonical": "#f7f4ec"
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "#fffdf8"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#17211c"
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone (brand seed, not for text)",
+        "canonical": "#6b726d"
+      },
+      "stone-text": {
+        "role": "neutral",
+        "displayName": "Stone Text",
+        "canonical": "#5c635e"
+      },
+      "primary-container": {
+        "role": "container",
+        "displayName": "Mint (Primary Container)",
+        "canonical": "#84f8c3",
+        "source": "App Material token (FlexSeedScheme)"
+      },
+      "on-primary-container": {
+        "role": "container",
+        "displayName": "On Primary Container",
+        "canonical": "#005137",
+        "source": "App Material token (FlexSeedScheme)"
+      },
+      "secondary-container": {
+        "role": "container",
+        "displayName": "Sky (Secondary Container)",
+        "canonical": "#bde9ff",
+        "source": "App Material token (FlexSeedScheme)"
+      },
+      "on-secondary-container": {
+        "role": "container",
+        "displayName": "On Secondary Container",
+        "canonical": "#004d64",
+        "source": "App Material token (FlexSeedScheme)"
+      },
+      "tertiary-container": {
+        "role": "container",
+        "displayName": "Peach (Tertiary Container)",
+        "canonical": "#ffdbcf",
+        "source": "App Material token (FlexSeedScheme)"
+      },
+      "on-tertiary-container": {
+        "role": "container",
+        "displayName": "On Tertiary Container",
+        "canonical": "#812900",
+        "source": "App Material token (FlexSeedScheme)"
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero H1 only."
+        "purpose": "Hero line and closing poster line, capped 7-8.5ch."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section titles."
+        "purpose": "Section titles on the wall, capped 11-12ch."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Feature card headings."
+        "purpose": "Headline of a large poster sheet."
+      },
+      "poster-name": {
+        "displayName": "Poster Name",
+        "purpose": "Real place or event name on a small poster."
       },
       "lede": {
         "displayName": "Lede",
-        "purpose": "Intro paragraphs in Stone."
+        "purpose": "One intro paragraph, max 34rem."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "All running text."
+        "purpose": "Running text; legal prose at 65ch."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Uppercase terracotta eyebrows."
+        "purpose": "Info lines and captions; paste strips at 0.78rem/0.1em."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Paper button label."
       }
     },
     "shadows": [
       {
-        "name": "soft",
-        "value": "0 22px 60px rgb(23 33 28 / 0.12)",
-        "purpose": "Large floating object (phone mock-up)."
+        "name": "paper",
+        "value": "0 1px 1px rgb(23 33 28 / 0.1), 0 18px 32px -14px rgb(23 33 28 / 0.32)",
+        "purpose": "Every poster sheet and the paper button at rest."
       },
       {
-        "name": "card",
-        "value": "0 12px 30px rgb(23 33 28 / 0.09)",
-        "purpose": "Small floating cards."
+        "name": "paper-lifted",
+        "value": "0 2px 2px rgb(23 33 28 / 0.1), 0 30px 48px -18px rgb(23 33 28 / 0.4)",
+        "purpose": "Sheet being pasted or peeled; button hover."
       },
       {
-        "name": "button-glow",
-        "value": "0 10px 25px color-mix(in srgb, #087a55 24%, transparent)",
-        "purpose": "Primary button only."
+        "name": "strip",
+        "value": "0 6px 14px -8px rgb(23 33 28 / 0.5)",
+        "purpose": "Paste strips."
+      },
+      {
+        "name": "under-layer",
+        "value": "0 1px 1px rgb(23 33 28 / 0.08)",
+        "purpose": "Older sheets underneath the hero."
       }
     ],
     "motion": [
       {
-        "name": "lift",
-        "value": "transform 160ms ease; translateY(-2px)",
-        "purpose": "Hover on buttons and store buttons."
+        "name": "ease-paste",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All paper motion: paste-in, button and badge lift."
+      },
+      {
+        "name": "paste-in",
+        "value": "700ms ease-paste, from translate 0 -10px, scale 1.025, paper-lifted; delay order x 70ms",
+        "purpose": "Posters pasted once on load from a visible default."
+      },
+      {
+        "name": "press-lift",
+        "value": "translate 0 -2px, 180ms ease-paste",
+        "purpose": "Paper button and store badge hover."
+      },
+      {
+        "name": "peel",
+        "value": "view-timeline over 330vh; sheet 1 contain 10%-42%, sheet 2 contain 50%-82%; to translate -18% -125vh, rotate -16deg",
+        "purpose": "Signature peel stack; needs animation-timeline, no-preference motion, >=52rem wide, >=40rem tall."
       },
       {
         "name": "reduced-motion",
@@ -285,28 +274,31 @@
     ],
     "breakpoints": [
       {
-        "name": "store-full",
-        "value": "30rem"
-      },
-      {
-        "name": "mobile",
-        "value": "34rem"
-      },
-      {
-        "name": "footer-stack",
+        "name": "nav-links-hide",
         "value": "40rem"
       },
       {
-        "name": "nav-collapse",
-        "value": "44rem"
+        "name": "posters-stack",
+        "value": "46rem"
       },
       {
-        "name": "grid-stack",
+        "name": "peel-min-width",
         "value": "52rem"
       },
       {
-        "name": "hero-stack",
+        "name": "discover-stack",
+        "value": "56rem"
+      },
+      {
+        "name": "hero-respan",
         "value": "64rem"
+      }
+    ],
+    "textures": [
+      {
+        "name": "grain",
+        "value": "SVG fractalNoise (baseFrequency .9, 3 octaves) at 7% ink",
+        "purpose": "Wall, every poster and every chip."
       }
     ],
     "appDarkScheme": {
@@ -345,116 +337,136 @@
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Paper Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Main call to action: download the app.",
-      "html": "<a class=\"ds-btn-primary\" href=\"#\">Scarica Molise Is <span aria-hidden=\"true\">→</span></a>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-btn-primary{display:inline-flex;min-height:3.25rem;align-items:center;justify-content:center;gap:.65rem;padding:.8rem 1.25rem;border:1px solid transparent;border-radius:999px;font-family:var(--font-body);font-weight:650;line-height:1;text-decoration:none;transition:transform 160ms ease,background-color 160ms ease,border-color 160ms ease;color:#fff;background:var(--color-primary);box-shadow:0 10px 25px color-mix(in srgb,var(--color-primary) 24%,transparent);}.ds-btn-primary:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--color-primary) 90%,black);}.ds-btn-primary:focus-visible{outline:3px solid color-mix(in srgb,var(--color-secondary) 70%,white);outline-offset:4px;}"
+      "description": "A printed Forest label you can press; lifts 2px with the lifted paper shadow.",
+      "html": "<div class=\"ds-wall\"><a class=\"ds-btn\" href=\"#\">Scarica l'app</a></div>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-btn{display:inline-flex;min-height:2.75rem;align-items:center;justify-content:center;gap:.5rem;padding:.7rem 1.1rem;border-radius:var(--radius-paper);color:var(--brand-ivory);background:var(--brand-forest);box-shadow:var(--shadow-paper);font-family:var(--font-body);font-size:.82rem;font-weight:700;letter-spacing:.08em;line-height:1;text-decoration:none;text-transform:uppercase;transition:translate 180ms var(--ease-paste),box-shadow 180ms var(--ease-paste),background-color 180ms ease;}.ds-btn:hover{translate:0 -2px;background:color-mix(in srgb,var(--brand-forest) 88%,black);box-shadow:var(--shadow-paper-lifted);}.ds-btn:active{translate:0 0;}.ds-btn:focus-visible{outline:3px solid var(--brand-adriatic);outline-offset:3px;}"
     },
     {
-      "name": "Secondary Button",
-      "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "Quiet alternative action next to the primary.",
-      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Scopri cosa trovi</a>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-btn-secondary{display:inline-flex;min-height:3.25rem;align-items:center;justify-content:center;gap:.65rem;padding:.8rem 1.25rem;border:1px solid transparent;border-radius:999px;font-family:var(--font-body);font-weight:650;line-height:1;text-decoration:none;transition:transform 160ms ease,background-color 160ms ease,border-color 160ms ease;color:var(--color-text);border-color:var(--color-border);background:color-mix(in srgb,var(--color-surface) 75%,transparent);}.ds-btn-secondary:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--color-text) 25%,transparent);}.ds-btn-secondary:focus-visible{outline:3px solid color-mix(in srgb,var(--color-secondary) 70%,white);outline-offset:4px;}"
-    },
-    {
-      "name": "Store Button",
-      "kind": "button",
-      "refersTo": "store-button",
-      "description": "App Store / Google Play link on the Forest CTA panel.",
-      "html": "<div class=\"ds-store-wrap\"><a class=\"ds-store\" href=\"#\" aria-label=\"Scarica Molise Is su App Store\"><span aria-hidden=\"true\">●</span><span><small>Scarica su</small><strong>App Store</strong></span></a></div>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-store-wrap{padding:1.5rem;background:var(--color-primary);border-radius:2rem;}.ds-store{display:flex;min-width:11.5rem;align-items:center;gap:.75rem;padding:.75rem 1rem;border:1px solid rgb(255 255 255/.28);border-radius:1rem;color:var(--color-text);background:var(--color-background);font-family:var(--font-body);text-decoration:none;transition:transform 160ms ease;}.ds-store:hover{transform:translateY(-2px);}.ds-store:focus-visible{outline:3px solid color-mix(in srgb,var(--color-secondary) 70%,white);outline-offset:4px;}.ds-store small,.ds-store strong{display:block;}.ds-store small{color:var(--color-text-muted);font-size:.58rem;}.ds-store strong{margin-top:-.1rem;font-size:.9rem;}"
-    },
-    {
-      "name": "Eyebrow",
-      "kind": "chip",
-      "refersTo": "label",
-      "description": "Terracotta uppercase label with a leading rule, above every section title.",
-      "html": "<p class=\"ds-eyebrow\">Dentro Molise Is</p>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-eyebrow{display:inline-flex;align-items:center;gap:.55rem;margin:0;color:var(--color-accent);font-family:var(--font-body);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}.ds-eyebrow::before{width:1.5rem;height:2px;content:'';background:currentColor;}"
-    },
-    {
-      "name": "Feature Card",
+      "name": "Main Poster with Info Band",
       "kind": "card",
-      "refersTo": "feature-card",
-      "description": "Tinted card for one app capability, number on top, title and text at the bottom.",
-      "html": "<article class=\"ds-feature\"><span class=\"ds-feature-num\">01</span><div><h3>Luoghi</h3><p>Borghi, natura, punti panoramici e piccole realtà da tenere a portata di mano.</p></div></article>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-feature{display:flex;min-height:20rem;max-width:22rem;flex-direction:column;justify-content:space-between;padding:2rem;border-radius:2rem;color:#005137;background:#84f8c3;font-family:var(--font-body);line-height:1.65;}.ds-feature-num{font-family:var(--font-display);font-size:1.2rem;font-weight:650;}.ds-feature h3{margin:0;font-family:var(--font-display);font-size:3rem;font-weight:650;letter-spacing:-.04em;line-height:1;}.ds-feature p{margin:.75rem 0 0;}"
+      "refersTo": "poster-forest",
+      "description": "Forest stock poster: display line in Ivory, one lede, a paste strip, and the white info band holding the official store badges.",
+      "html": "<div class=\"ds-wall\"><div class=\"ds-poster ds-forest\" style=\"--tilt:-0.8deg;padding:2rem 1.5rem 1.5rem;max-width:30rem\"><span class=\"ds-strip\" style=\"--tilt:5deg;top:-.9rem;right:-1.2rem\">Gratis su iPhone e Android</span><h1 class=\"ds-display\">L’inatteso che ti aspetta.</h1><p class=\"ds-lede\">Luoghi, eventi e scoperte del Molise in un posto solo.</p><div class=\"ds-info\"><div class=\"ds-badges\"><a class=\"ds-badge\" href=\"#\">App Store (official badge)</a><a class=\"ds-badge\" href=\"#\">Google Play (official badge)</a></div></div></div></div>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-poster{position:relative;border-radius:var(--radius-paper);box-shadow:var(--shadow-paper);rotate:var(--tilt,0deg);}.ds-forest{color:var(--brand-ivory);background:var(--brand-forest);}.ds-adriatic{color:var(--brand-ivory);background:var(--brand-adriatic);}.ds-terra{color:var(--brand-ivory);background:var(--brand-terra);}.ds-mint{color:var(--color-on-primary-container);background:var(--color-primary-container);}.ds-sky{color:var(--color-on-secondary-container);background:var(--color-secondary-container);}.ds-peach{color:var(--color-on-tertiary-container);background:var(--color-tertiary-container);}.ds-sheet{color:var(--brand-ink);background:var(--color-sheet);}.ds-strip{position:absolute;z-index:3;padding:.45rem 1.1rem;color:var(--brand-ivory);background:var(--brand-terra);box-shadow:0 6px 14px -8px rgb(23 33 28/.5);font-family:var(--font-body);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;rotate:var(--tilt,-4deg);}.ds-display{margin:0;max-width:8.5ch;font-family:var(--font-display);font-size:3rem;font-weight:850;letter-spacing:-.03em;line-height:.92;}.ds-lede{max-width:34rem;margin:1rem 0 0;font-size:1.1rem;line-height:1.55;}.ds-info{width:fit-content;max-width:100%;margin-top:1.5rem;padding:1rem 1.1rem 1.15rem;border-radius:2px;color:var(--brand-ink);background:var(--color-sheet);}.ds-badges{display:flex;flex-wrap:wrap;gap:.75rem;}.ds-badge{display:flex;height:3rem;align-items:center;padding:0 1rem;border-radius:9px;color:#fff;background:#000;font-family:var(--font-body);font-size:.85rem;font-weight:500;text-decoration:none;transition:translate 180ms var(--ease-paste);}.ds-badge:hover{translate:0 -2px;}.ds-badge:focus-visible{outline:3px solid var(--brand-adriatic);outline-offset:3px;}"
+    },
+    {
+      "name": "Paste Strip",
+      "kind": "chip",
+      "refersTo": "paste-strip",
+      "description": "Terra band pasted diagonally across a poster corner, short Lexend capitals label.",
+      "html": "<div class=\"ds-wall\"><div class=\"ds-poster ds-mint\" style=\"--tilt:-1.5deg;height:8rem;max-width:18rem\"><span class=\"ds-strip\" style=\"--tilt:-5deg;top:-.85rem;left:-.9rem\">Luoghi</span></div></div>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-poster{position:relative;border-radius:var(--radius-paper);box-shadow:var(--shadow-paper);rotate:var(--tilt,0deg);}.ds-forest{color:var(--brand-ivory);background:var(--brand-forest);}.ds-adriatic{color:var(--brand-ivory);background:var(--brand-adriatic);}.ds-terra{color:var(--brand-ivory);background:var(--brand-terra);}.ds-mint{color:var(--color-on-primary-container);background:var(--color-primary-container);}.ds-sky{color:var(--color-on-secondary-container);background:var(--color-secondary-container);}.ds-peach{color:var(--color-on-tertiary-container);background:var(--color-tertiary-container);}.ds-sheet{color:var(--brand-ink);background:var(--color-sheet);}.ds-strip{position:absolute;z-index:3;padding:.45rem 1.1rem;color:var(--brand-ivory);background:var(--brand-terra);box-shadow:0 6px 14px -8px rgb(23 33 28/.5);font-family:var(--font-body);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;rotate:var(--tilt,-4deg);}"
+    },
+    {
+      "name": "Small Place and Event Posters",
+      "kind": "card",
+      "refersTo": "poster-mint",
+      "description": "Small pasted posters with a real name in Fraunces 850 and one Lexend line.",
+      "html": "<div class=\"ds-wall\" style=\"display:flex;gap:1.5rem;flex-wrap:wrap\"><div class=\"ds-poster ds-mint ds-small\" style=\"--tilt:-3deg\"><p class=\"ds-name\">Lago Turchese</p><p class=\"ds-where\">Luogo · Castel San Vincenzo</p></div><div class=\"ds-poster ds-terra ds-small\" style=\"--tilt:3.5deg\"><p class=\"ds-name\">’Ndocciata</p><p class=\"ds-where\">Evento · Agnone</p></div></div>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-poster{position:relative;border-radius:var(--radius-paper);box-shadow:var(--shadow-paper);rotate:var(--tilt,0deg);}.ds-forest{color:var(--brand-ivory);background:var(--brand-forest);}.ds-adriatic{color:var(--brand-ivory);background:var(--brand-adriatic);}.ds-terra{color:var(--brand-ivory);background:var(--brand-terra);}.ds-mint{color:var(--color-on-primary-container);background:var(--color-primary-container);}.ds-sky{color:var(--color-on-secondary-container);background:var(--color-secondary-container);}.ds-peach{color:var(--color-on-tertiary-container);background:var(--color-tertiary-container);}.ds-sheet{color:var(--brand-ink);background:var(--color-sheet);}.ds-small{padding:1rem 1.1rem 1.15rem;}.ds-name{margin:0;font-family:var(--font-display);font-size:1.6rem;font-weight:850;letter-spacing:-.02em;line-height:1;}.ds-where{margin:.35rem 0 0;font-size:.88rem;}"
+    },
+    {
+      "name": "Printed Screen",
+      "kind": "custom",
+      "refersTo": "printed-screen",
+      "description": "A real app screenshot printed into a poster: app-surface backing, 1.1rem corners, 30% current-colour border, label caption below.",
+      "html": "<div class=\"ds-wall\"><figure class=\"ds-poster ds-sky\" style=\"--tilt:2.4deg;margin:0;padding:.85rem;width:12rem\"><div class=\"ds-screen\"><div class=\"ds-shot\"></div></div><figcaption class=\"ds-tag\">La Home dell'app</figcaption></figure></div>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-poster{position:relative;border-radius:var(--radius-paper);box-shadow:var(--shadow-paper);rotate:var(--tilt,0deg);}.ds-forest{color:var(--brand-ivory);background:var(--brand-forest);}.ds-adriatic{color:var(--brand-ivory);background:var(--brand-adriatic);}.ds-terra{color:var(--brand-ivory);background:var(--brand-terra);}.ds-mint{color:var(--color-on-primary-container);background:var(--color-primary-container);}.ds-sky{color:var(--color-on-secondary-container);background:var(--color-secondary-container);}.ds-peach{color:var(--color-on-tertiary-container);background:var(--color-tertiary-container);}.ds-sheet{color:var(--brand-ink);background:var(--color-sheet);}.ds-screen{overflow:hidden;border:1px solid color-mix(in srgb,currentColor 30%,transparent);border-radius:var(--radius-screen);background:#f5fbf5;}.ds-shot{aspect-ratio:10/15;}.ds-tag{display:block;margin-top:.8rem;font-size:.74rem;font-weight:700;letter-spacing:.12em;line-height:1.3;text-transform:uppercase;}"
+    },
+    {
+      "name": "Category Chips",
+      "kind": "chip",
+      "refersTo": "category-chip",
+      "description": "Printed Fraunces labels on container stock, flat and tilted; non-interactive.",
+      "html": "<div class=\"ds-wall\"><ul class=\"ds-chips\"><li class=\"ds-chip ds-mint\" style=\"--tilt:-3deg\">Natura</li><li class=\"ds-chip ds-peach\" style=\"--tilt:2deg\">Storia</li><li class=\"ds-chip ds-sky\" style=\"--tilt:-1.5deg\">Folklore</li></ul></div>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-mint{color:var(--color-on-primary-container);background:var(--color-primary-container);}.ds-sky{color:var(--color-on-secondary-container);background:var(--color-secondary-container);}.ds-peach{color:var(--color-on-tertiary-container);background:var(--color-tertiary-container);}.ds-chips{display:flex;flex-wrap:wrap;gap:.75rem .6rem;margin:0;padding:0;list-style:none;}.ds-chip{padding:.4rem .85rem;border-radius:2px;font-family:var(--font-display);font-size:1.25rem;font-weight:700;letter-spacing:-.01em;rotate:var(--tilt);}"
+    },
+    {
+      "name": "Notice Sheet",
+      "kind": "card",
+      "refersTo": "poster-sheet",
+      "description": "Small white sheet for an aside: Fraunces 850 title and one Stone Text line.",
+      "html": "<div class=\"ds-wall\"><aside class=\"ds-poster ds-sheet ds-notice\" style=\"--tilt:-1deg\"><p class=\"ds-notice-title\">Manca un posto?</p><p>Segnalalo dall'app e lo aggiungiamo al muro.</p></aside></div>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-poster{position:relative;border-radius:var(--radius-paper);box-shadow:var(--shadow-paper);rotate:var(--tilt,0deg);}.ds-forest{color:var(--brand-ivory);background:var(--brand-forest);}.ds-adriatic{color:var(--brand-ivory);background:var(--brand-adriatic);}.ds-terra{color:var(--brand-ivory);background:var(--brand-terra);}.ds-mint{color:var(--color-on-primary-container);background:var(--color-primary-container);}.ds-sky{color:var(--color-on-secondary-container);background:var(--color-secondary-container);}.ds-peach{color:var(--color-on-tertiary-container);background:var(--color-tertiary-container);}.ds-sheet{color:var(--brand-ink);background:var(--color-sheet);}.ds-notice{max-width:24rem;padding:1.25rem 1.4rem 1.4rem;}.ds-notice-title{margin:0;font-family:var(--font-display);font-size:1.7rem;font-weight:850;letter-spacing:-.02em;line-height:1;}.ds-notice p:last-child{margin:.6rem 0 0;color:var(--color-text-muted);}"
     },
     {
       "name": "Header Navigation",
       "kind": "nav",
       "refersTo": "navigation",
-      "description": "Transparent header: brand wordmark, text links, pill CTA.",
-      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\">Molise Is</a><nav><a href=\"#\">L'app</a><a href=\"#\">Scopri</a><a class=\"ds-nav-cta\" href=\"#\">Scarica l'app</a></nav></header>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-nav{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.25rem;background:var(--color-background);color:var(--color-text);font-family:var(--font-body);}.ds-brand{font-family:var(--font-display);font-size:1.35rem;font-weight:700;letter-spacing:-.035em;color:inherit;text-decoration:none;}.ds-nav nav{display:flex;align-items:center;gap:1.5rem;}.ds-nav nav a{color:inherit;font-size:.9rem;font-weight:550;text-decoration:none;}.ds-nav nav a:hover{text-decoration:underline;text-underline-offset:.2em;}.ds-nav nav a:focus-visible{outline:3px solid color-mix(in srgb,var(--color-secondary) 70%,white);outline-offset:4px;}.ds-nav .ds-nav-cta{display:inline-flex;min-height:2.8rem;align-items:center;padding:0 1rem;border-radius:999px;color:#fff;background:var(--color-primary);font-weight:650;}.ds-nav .ds-nav-cta:hover{text-decoration:none;background:color-mix(in srgb,var(--color-primary) 90%,black);}"
+      "description": "Header on the wall: pin logo and Fraunces name, Lexend text links, download link.",
+      "html": "<header class=\"ds-wall ds-nav\"><a class=\"ds-brand\" href=\"#\"><svg width=\"22\" height=\"30\" viewBox=\"0 0 22 30\" aria-hidden=\"true\"><path d=\"M11 0C4.9 0 0 4.9 0 11c0 8.2 11 19 11 19s11-10.8 11-19C22 4.9 17.1 0 11 0z\" fill=\"#087a55\"/><circle cx=\"11\" cy=\"11\" r=\"4\" fill=\"#f7f4ec\"/></svg>Molise Is</a><nav><a class=\"ds-link\" href=\"#\">L'app</a><a class=\"ds-link\" href=\"#\">Scopri</a><a class=\"ds-link\" href=\"#\">Scarica</a></nav></header>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}.ds-nav nav{display:flex;gap:1.5rem;}.ds-brand{display:flex;align-items:center;gap:.6rem;color:inherit;font-family:var(--font-display);font-size:1.45rem;font-weight:850;letter-spacing:-.03em;text-decoration:none;}.ds-link{color:inherit;font-size:.92rem;font-weight:500;text-decoration:none;text-underline-offset:.2em;}.ds-link:hover{text-decoration:underline;}.ds-link:focus-visible,.ds-brand:focus-visible{outline:3px solid var(--brand-adriatic);outline-offset:3px;}"
     },
     {
-      "name": "Floating Card",
+      "name": "Peel Stack (static fallback)",
       "kind": "custom",
-      "refersTo": "floating-card",
-      "description": "Small tilted card over the app preview: event date badge plus label.",
-      "html": "<div class=\"ds-float\"><span class=\"ds-date\">14</span><span><small>EVENTO</small><b>Sagra nel borgo</b></span></div>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-float{display:flex;align-items:center;gap:.8rem;width:14rem;padding:.85rem;border:1px solid rgb(255 255 255/.7);border-radius:1.15rem;background:rgb(255 253 248/.91);box-shadow:0 12px 30px rgb(23 33 28/.09);font-family:var(--font-body);color:var(--color-text);transform:rotate(-3deg);}.ds-date{display:grid;width:2.7rem;height:2.7rem;place-items:center;border-radius:.8rem;color:#fff;background:var(--color-secondary);font-family:var(--font-display);font-size:1.2rem;font-weight:700;}.ds-float small{display:block;color:var(--color-accent);font-size:.63rem;font-weight:700;letter-spacing:.11em;}.ds-float b{display:block;margin-top:.2rem;font-size:.86rem;}"
+      "refersTo": "poster-mint",
+      "description": "Signature: Luoghi, Eventi, Scoperte sheets stacked; in the build they peel off on a CSS view timeline. Shown here in its static staggered fallback.",
+      "html": "<div class=\"ds-wall ds-stack\"><article class=\"ds-poster ds-mint ds-big\" style=\"--tilt:-1.5deg\"><span class=\"ds-strip\" style=\"--tilt:-5deg;top:-.85rem;left:-.9rem\">Luoghi</span><h3>Cosa c’è qui intorno.</h3></article><article class=\"ds-poster ds-sky ds-big\" style=\"--tilt:1.2deg;justify-self:end\"><span class=\"ds-strip\" style=\"--tilt:4deg;top:-.85rem;right:-.9rem\">Eventi</span><h3>Cosa succede, giorno per giorno.</h3></article></div>",
+      "css": ":host{--brand-forest:#087a55;--brand-adriatic:#176b87;--brand-terra:#b84e23;--brand-ivory:#f7f4ec;--brand-ink:#17211c;--color-sheet:#fffdf8;--color-text-muted:#5c635e;--color-primary-container:#84f8c3;--color-on-primary-container:#005137;--color-secondary-container:#bde9ff;--color-on-secondary-container:#004d64;--color-tertiary-container:#ffdbcf;--color-on-tertiary-container:#812900;--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;--radius-paper:3px;--radius-screen:1.1rem;--shadow-paper:0 1px 1px rgb(23 33 28/.1),0 18px 32px -14px rgb(23 33 28/.32);--shadow-paper-lifted:0 2px 2px rgb(23 33 28/.1),0 30px 48px -18px rgb(23 33 28/.4);--ease-paste:cubic-bezier(.16,1,.3,1);}.ds-wall{padding:2rem;background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body);}.ds-poster{position:relative;border-radius:var(--radius-paper);box-shadow:var(--shadow-paper);rotate:var(--tilt,0deg);}.ds-forest{color:var(--brand-ivory);background:var(--brand-forest);}.ds-adriatic{color:var(--brand-ivory);background:var(--brand-adriatic);}.ds-terra{color:var(--brand-ivory);background:var(--brand-terra);}.ds-mint{color:var(--color-on-primary-container);background:var(--color-primary-container);}.ds-sky{color:var(--color-on-secondary-container);background:var(--color-secondary-container);}.ds-peach{color:var(--color-on-tertiary-container);background:var(--color-tertiary-container);}.ds-sheet{color:var(--brand-ink);background:var(--color-sheet);}.ds-strip{position:absolute;z-index:3;padding:.45rem 1.1rem;color:var(--brand-ivory);background:var(--brand-terra);box-shadow:0 6px 14px -8px rgb(23 33 28/.5);font-family:var(--font-body);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;rotate:var(--tilt,-4deg);}.ds-stack{display:grid;gap:2.5rem;}.ds-big{width:min(100%,24rem);padding:1.5rem;}.ds-big h3{margin:0;font-family:var(--font-display);font-size:2rem;font-weight:850;letter-spacing:-.03em;line-height:.95;}"
     }
   ],
   "narrative": {
-    "northStar": "Cartolina dal Borgo",
-    "overview": "The site reads like a postcard sent from a village you have just found: warm ivory paper, a large serif greeting, and the colours of the land and sea of Molise, with forest green, Adriatic blue and roof-tile terracotta. Stylised landscapes (hills, a sun, rows of houses with terracotta roofs) and slightly rotated organic blobs replace stock photography. The result feels familiar and handmade rather than promotional.\n\nThe layout is generous and calm. Sections breathe on large vertical padding, headlines are oversized and tightly set, and body copy stays muted and short. Depth comes from tonal blocks and a few soft shadows, never from glass or glow. Interaction is gentle: elements lift by 2px on hover and nothing flashes.\n\nIt must never look like an institutional portal (crests, banners, dense link grids) or a tech startup (purple gradients, neon dark mode, glassmorphism as a style).",
+    "northStar": "Muri delle sagre",
+    "overview": "The site is a village wall in Molise where the season's posters are pasted, and Molise Is is the poster on top that collects all the others. The ground is Ivory plaster with a fine grain; everything that carries content is a sheet of paper on it: full-colour Forest, Adriatic and Terra stock, a second run on the app's pale Material containers, and plain sheet white. Sheets hang slightly rotated, overlap, and carry a soft paper shadow. Heavy stacked Fraunces is set like a village print shop; Lexend capitals carry the small print (what, where, when). Real app screens are printed into the posters, never mocked inside a phone frame.\n\nDensity is poster-like: few words, very large type, generous wall between sheets. Composition is collage rather than grid of equal cards; posters overlap, older sheets show only their edges underneath, and the newest paste sits on top. Motion is the act of pasting: posters settle once on load from a slight lift and then stay still, except in the one signature moment where a stack of posters peels off the wall as you scroll.\n\nThe page rejects the app-landing template: no split hero with a phone mockup, no row of equal feature cards. The previous world (\"Cartolina dal Borgo\": pill buttons, 2rem cards, organic blobs, CSS-drawn landscapes) is retired.",
     "keyCharacteristics": [
-      "Warm ivory canvas with ink text; one dark ink band for contrast.",
-      "Fraunces display serif at very large sizes with tight negative tracking; Lexend for everything else.",
-      "Three earth-and-sea accents, each with its own pale tint.",
-      "Rounded, organic forms: pill buttons, 2rem cards, irregular blob shapes, a few small rotations.",
-      "Illustration made in CSS shapes, not photographs (until real assets arrive)."
+      "Ivory plaster wall with a grain texture; content lives on paper sheets, never directly on glassy or floating cards.",
+      "Seven paper stocks: three brand seeds with Ivory text, three app containers with their on-container text, and sheet white with Ink.",
+      "Fraunces 850, tight tracking, stacked short lines; Lexend for every sentence, label and button.",
+      "Nearly square corners (2-3px) on all paper; rounding is reserved for printed device screens and official badges.",
+      "Small rotations (-5deg to 5deg) and overlap express the wall; a soft two-layer shadow lifts each sheet off the plaster.",
+      "Diagonal Terra paste strips across poster corners carry short labels."
     ],
     "rules": [
       {
-        "name": "The Terracotta Pinch Rule",
-        "body": "Terra Cotta is used sparingly, for labels, pins, badges and callouts (the brand guide's \"accenti, callout, badge\"). It is never the primary call to action: that is Forest.",
+        "name": "The Full-Strength Container Rule",
+        "body": "A tinted surface uses the app's Material container with its on-container text at full strength. Fading on-container text (the earlier 72% mix) fails AA; full strength measures about 7.2:1.",
         "section": "colors"
       },
       {
-        "name": "The Mix, Don't Invent Rule",
-        "body": "New shades come from `color-mix()` on existing tokens (with white, black, ivory or transparent), as the incumbent code does. Do not add new hex values.",
+        "name": "The Ivory On Stock Rule",
+        "body": "Text on Forest, Adriatic or Terra stock is Ivory at full strength (4.6 to 5.5:1). Do not fade it with `color-mix` toward transparent.",
         "section": "colors"
       },
       {
-        "name": "The Short Headline Rule",
-        "body": "Display and section titles are capped in `ch` (9.6ch and 12ch) so they break into two or three stacked lines, like a postcard caption.",
+        "name": "The Forest Acts Rule",
+        "body": "The paper button and the primary action are Forest. Terra Cotta labels and decorates; it never asks for the click.",
+        "section": "colors"
+      },
+      {
+        "name": "The Print Shop Weight Rule",
+        "body": "Every Fraunces line on the wall is 850 (legal h2 at 800), with `-0.02em` to `-0.03em` tracking and balanced wrapping. Lighter Fraunces is not part of this world.",
         "section": "typography"
       },
       {
-        "name": "The Serif Speaks, Sans Explains Rule",
-        "body": "Fraunces is for names, titles and numbers. Lexend carries every sentence, button and label.",
+        "name": "The Serif Names, Sans Tells Rule",
+        "body": "Fraunces is for titles, names and printed chips; Lexend carries every sentence, label, caption and button.",
         "section": "typography"
       },
       {
-        "name": "The Paper, Not Glass Rule",
-        "body": "Depth comes from paper tones and soft shadows. Translucency (`backdrop-filter`) appears only on the small floating cards over illustration, never as a general surface style.",
+        "name": "The Pasted, Not Floating Rule",
+        "body": "Shadows describe paper resting on plaster. Lift (the Lifted shadow, a 2px rise) appears only while a sheet is being pasted, peeled or pressed.",
         "section": "elevation"
-      },
-      {
-        "name": "The Same Tokens As The App Rule",
-        "body": "Any tinted surface uses the app's Material container tokens and its matching on-container text, so the site and the app screenshots read as one product. Ivory stays the page background by choice, even though the app's surface is a cooler green-white.",
-        "section": "colors"
       }
     ],
     "dos": [
-      "**Do** build every colour from the six brand tokens, the app's Material container and on-container tokens, or `color-mix()` of them.",
-      "**Do** set titles in Fraunces 650 with tight negative tracking and a `ch` max width; keep everything else in Lexend.",
-      "**Do** keep corners generous (pill buttons, 2rem cards) and tilt floating objects by 2–3°.",
-      "**Do** use soft ink-tinted shadows only on elements that float, and keep hover feedback to a 2px lift over 160ms.",
-      "**Do** respect `prefers-reduced-motion` (smooth scroll and transitions off) and keep the visible Adriatic focus ring."
+      "**Do** put content on paper: one of the seven stocks, 3px corners, Paper shadow, grain, a small tilt.",
+      "**Do** use Ivory at full strength on Forest, Adriatic and Terra, and on-container text at full strength on the app containers.",
+      "**Do** keep the primary action as the official store badges on a white info band, and any button Forest.",
+      "**Do** set titles and names in Fraunces 850 with tight tracking and a `ch` cap; set small print in Lexend 700 capitals.",
+      "**Do** print real app screens and use real Molise place and event names.",
+      "**Do** keep motion to the paste-in on load and the peel stack, with a static fallback for reduced motion and unsupported browsers."
     ],
     "donts": [
-      "**Don't** make it look like an institutional portal: no crests, banners, dense link grids or bureaucratic tables.",
-      "**Don't** make it look like a tech startup: no purple gradients, neon dark mode, or glassmorphism as a surface style.",
-      "**Don't** introduce sharp corners or hard-edged, heavy drop shadows.",
-      "Don't use Terra Cotta for the primary CTA or as the dominant colour of a page section."
+      "**Don't** build the app-landing template: no split hero with a phone mockup, no row of equal feature cards.",
+      "**Don't** round paper sheets beyond 3px or use pill buttons; rounding belongs to printed screens and official badges only.",
+      "**Don't** use glass, blur or glow; depth is overlap, tilt and the paper shadow.",
+      "**Don't** use Terra Cotta for the primary action or as a section's dominant colour.",
+      "**Don't** fade text on coloured stock or containers with `color-mix` toward transparent.",
+      "**Don't** replace the Ivory wall with the app's green-white surface."
     ]
   }
 }
