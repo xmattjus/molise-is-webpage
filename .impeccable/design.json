@@ -116,53 +116,41 @@
           "#edefee"
         ]
       },
-      "forest-tint": {
-        "role": "tint",
-        "displayName": "Forest Tint",
-        "canonical": "#cce8da",
-        "oklch": "oklch(90.7% 0.035 164)",
-        "tonalRamp": [
-          "#090c0a",
-          "#1f2924",
-          "#384a41",
-          "#546d61",
-          "#779084",
-          "#a1b3aa",
-          "#c9d4ce",
-          "#ebf0ed"
-        ]
+      "primary-container": {
+        "role": "container",
+        "displayName": "Primary Container",
+        "canonical": "#c8f1dc",
+        "source": "App Material token (FlexSeedScheme)"
       },
-      "adriatic-tint": {
-        "role": "tint",
-        "displayName": "Adriatic Tint",
-        "canonical": "#c9e3ed",
-        "oklch": "oklch(90.0% 0.031 223)",
-        "tonalRamp": [
-          "#090c0d",
-          "#1f282c",
-          "#38484e",
-          "#536a73",
-          "#778d96",
-          "#a1b1b7",
-          "#c9d3d7",
-          "#ebeff1"
-        ]
+      "on-primary-container": {
+        "role": "container",
+        "displayName": "On Primary Container",
+        "canonical": "#003624",
+        "source": "App Material token (FlexSeedScheme)"
       },
-      "terra-cotta-tint": {
-        "role": "tint",
-        "displayName": "Terra Cotta Tint",
-        "canonical": "#f0d2c3",
-        "oklch": "oklch(88.5% 0.039 48)",
-        "tonalRamp": [
-          "#0e0a09",
-          "#2e241f",
-          "#534037",
-          "#7a6053",
-          "#9d8376",
-          "#bda9a0",
-          "#dacec8",
-          "#f3edeb"
-        ]
+      "secondary-container": {
+        "role": "container",
+        "displayName": "Secondary Container",
+        "canonical": "#cde9f4",
+        "source": "App Material token (FlexSeedScheme)"
+      },
+      "on-secondary-container": {
+        "role": "container",
+        "displayName": "On Secondary Container",
+        "canonical": "#002e3a",
+        "source": "App Material token (FlexSeedScheme)"
+      },
+      "tertiary-container": {
+        "role": "container",
+        "displayName": "Tertiary Container",
+        "canonical": "#ffdcc7",
+        "source": "App Material token (FlexSeedScheme)"
+      },
+      "on-tertiary-container": {
+        "role": "container",
+        "displayName": "On Tertiary Container",
+        "canonical": "#3a1100",
+        "source": "App Material token (FlexSeedScheme)"
       }
     },
     "typographyMeta": {
@@ -286,7 +274,7 @@
       "refersTo": "feature-card",
       "description": "Tinted card for one app capability, number on top, title and text at the bottom.",
       "html": "<article class=\"ds-feature\"><span class=\"ds-feature-num\">01</span><div><h3>Luoghi</h3><p>Borghi, natura, punti panoramici e piccole realtà da tenere a portata di mano.</p></div></article>",
-      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-feature{display:flex;min-height:20rem;max-width:22rem;flex-direction:column;justify-content:space-between;padding:2rem;border-radius:2rem;color:var(--color-text);background:#cce8da;font-family:var(--font-body);line-height:1.65;}.ds-feature-num{font-family:var(--font-display);font-size:1.2rem;font-weight:650;}.ds-feature h3{margin:0;font-family:var(--font-display);font-size:3rem;font-weight:650;letter-spacing:-.04em;line-height:1;}.ds-feature p{margin:.75rem 0 0;color:color-mix(in srgb,var(--color-text) 72%,transparent);}"
+      "css": ":host{--color-primary:#087a55;--color-secondary:#176b87;--color-accent:#b84e23;--color-background:#f7f4ec;--color-surface:#fffdf8;--color-text:#17211c;--color-text-muted:#6b726d;--color-border:color-mix(in srgb,#17211c 13%,transparent);--font-display:'Fraunces',Georgia,serif;--font-body:'Lexend',system-ui,sans-serif;}.ds-feature{display:flex;min-height:20rem;max-width:22rem;flex-direction:column;justify-content:space-between;padding:2rem;border-radius:2rem;color:#003624;background:#c8f1dc;font-family:var(--font-body);line-height:1.65;}.ds-feature-num{font-family:var(--font-display);font-size:1.2rem;font-weight:650;}.ds-feature h3{margin:0;font-family:var(--font-display);font-size:3rem;font-weight:650;letter-spacing:-.04em;line-height:1;}.ds-feature p{margin:.75rem 0 0;color:color-mix(in srgb,currentColor 72%,transparent);}"
     },
     {
       "name": "Header Navigation",
@@ -340,10 +328,15 @@
         "name": "The Paper, Not Glass Rule",
         "body": "Depth comes from paper tones and soft shadows. Translucency (`backdrop-filter`) appears only on the small floating cards over illustration, never as a general surface style.",
         "section": "elevation"
+      },
+      {
+        "name": "The Same Tokens As The App Rule",
+        "body": "Any tinted surface uses the app's Material container tokens and its matching on-container text, so the site and the app screenshots read as one product. Ivory stays the page background by choice, even though the app's surface is a cooler green-white.",
+        "section": "colors"
       }
     ],
     "dos": [
-      "**Do** build every colour from the six brand tokens, their three tints, or `color-mix()` of them.",
+      "**Do** build every colour from the six brand tokens, the app's Material container and on-container tokens, or `color-mix()` of them.",
       "**Do** set titles in Fraunces 650 with tight negative tracking and a `ch` max width; keep everything else in Lexend.",
       "**Do** keep corners generous (pill buttons, 2rem cards) and tilt floating objects by 2–3°.",
       "**Do** use soft ink-tinted shadows only on elements that float, and keep hover feedback to a 2px lift over 160ms.",

@@ -9,9 +9,12 @@ colors:
   surface: "#fffdf8"
   stone: "#6b726d"
   ink: "#17211c"
-  forest-tint: "#cce8da"
-  adriatic-tint: "#c9e3ed"
-  terra-cotta-tint: "#f0d2c3"
+  primary-container: "#c8f1dc"
+  on-primary-container: "#003624"
+  secondary-container: "#cde9f4"
+  on-secondary-container: "#002e3a"
+  tertiary-container: "#ffdcc7"
+  on-tertiary-container: "#3a1100"
 typography:
   display:
     fontFamily: "Fraunces, Georgia, serif"
@@ -75,8 +78,8 @@ components:
     rounded: "1rem"
     padding: "0.75rem 1rem"
   feature-card:
-    backgroundColor: "{colors.forest-tint}"
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.primary-container}"
+    textColor: "{colors.on-primary-container}"
     rounded: "{rounded.lg}"
     padding: "clamp(1.3rem, 2vw, 2rem)"
   cta-panel:
@@ -101,7 +104,7 @@ It must never look like an institutional portal (crests, banners, dense link gri
 **Key Characteristics:**
 - Warm ivory canvas with ink text; one dark ink band for contrast.
 - Fraunces display serif at very large sizes with tight negative tracking; Lexend for everything else.
-- Three earth-and-sea accents, each with its own pale tint.
+- Three earth-and-sea accents, each with its own pale container colour shared with the app.
 - Rounded, organic forms: pill buttons, 2rem cards, irregular blob shapes, a few small rotations.
 - Illustration made in CSS shapes, not photographs (until real assets arrive).
 
@@ -125,8 +128,11 @@ A warm, earthy palette: three accents taken from the region's landscape, set on 
 - **Ink** (`ink`): body text, the feature band background, and the phone frame.
 - **Border:** ink at 13% opacity (`color-mix(in srgb, ink 13%, transparent)`) for hairlines and outlines.
 
-### Tints
-- **Forest tint**, **Adriatic tint**, **Terra Cotta tint** (`forest-tint`, `adriatic-tint`, `terra-cotta-tint`): pale backgrounds for the three feature cards (Luoghi, Eventi, Le tue scoperte), one accent per card.
+### Containers (shared with the app)
+- **Primary / Secondary / Tertiary container** (`primary-container`, `secondary-container`, `tertiary-container`): pale backgrounds for the three feature cards (Luoghi, Eventi, Le tue scoperte), one accent per card. These are the app's Material tokens (FlexSeedScheme), not site-made tints.
+- **On-container** (`on-primary-container`, `on-secondary-container`, `on-tertiary-container`): the text colour on each container: a deep shade of the same hue, never neutral Ink. Secondary text on a container is the on-container colour at 72%.
+
+**The Same Tokens As The App Rule.** Any tinted surface uses the app's Material container tokens and its matching on-container text, so the site and the app screenshots read as one product. Ivory stays the page background by choice, even though the app's surface is a cooler green-white.
 
 ### Named Rules
 **The Terracotta Pinch Rule.** Terra Cotta is used sparingly, for labels, pins, badges and callouts (the brand guide's "accenti, callout, badge"). It is never the primary call to action: that is Forest.
@@ -193,7 +199,7 @@ Soft and welcoming: rounded, warm and lifted, inviting without insisting.
 - Ivory pills with 1rem corners and a two-line label ("Scarica su" in 0.58rem Stone, store name in 0.9rem bold), sitting on the Forest CTA panel. They lift by 2px on hover and go full width below 30rem.
 
 ### Cards / Containers
-- **Feature cards:** 2rem corners, one pale accent tint each, minimum height 20rem (14rem on mobile), with the content pushed apart vertically (a number at the top, the title and text at the bottom). No border and no shadow.
+- **Feature cards:** 2rem corners, one Material container colour each with its on-container text, minimum height 20rem (14rem on mobile), with the content pushed apart vertically (a number at the top, the title and text at the bottom). No border and no shadow.
 - **CTA panel:** a Forest block with corners from 2rem to 4rem, white text, and a light green eyebrow (`#bdebd7`).
 - **Ink band:** a full-bleed Ink section with Ivory text and a lede at 66% Ivory, used to frame the feature cards.
 
@@ -210,7 +216,7 @@ A blob-shaped frame in Adriatic mixed with white, a warm sun disc, two Forest hi
 ## Do's and Don'ts
 
 ### Do:
-- **Do** build every colour from the six brand tokens, their three tints, or `color-mix()` of them.
+- **Do** build every colour from the six brand tokens, the app's Material container and on-container tokens, or `color-mix()` of them.
 - **Do** set titles in Fraunces 650 with tight negative tracking and a `ch` max width; keep everything else in Lexend.
 - **Do** keep corners generous (pill buttons, 2rem cards) and tilt floating objects by 2–3°.
 - **Do** use soft ink-tinted shadows only on elements that float, and keep hover feedback to a 2px lift over 160ms.

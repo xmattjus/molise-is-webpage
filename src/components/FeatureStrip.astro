@@ -72,9 +72,9 @@
     color: var(--color-text);
   }
 
-  .feature--green { background: #cce8da; }
-  .feature--blue { background: #c9e3ed; }
-  .feature--orange { background: #f0d2c3; }
+  .feature--green { color: var(--color-on-primary-container); background: var(--color-primary-container); }
+  .feature--blue { color: var(--color-on-secondary-container); background: var(--color-secondary-container); }
+  .feature--orange { color: var(--color-on-tertiary-container); background: var(--color-tertiary-container); }
 
   .number {
     font-family: var(--font-display);
@@ -92,7 +92,7 @@
   .feature p {
     max-width: 27rem;
     margin: 0.75rem 0 0;
-    color: color-mix(in srgb, var(--color-text) 72%, transparent);
+    color: color-mix(in srgb, currentColor 72%, transparent);
   }
 
   @media (max-width: 52rem) {
