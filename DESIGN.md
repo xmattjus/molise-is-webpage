@@ -107,7 +107,7 @@ It must never look like an institutional portal (crests, banners, dense link gri
 
 ## Colors
 
-A warm, earthy palette: three accents taken from the region's landscape, set on ivory paper with near-black green ink.
+A warm, earthy palette: three accents taken from the region's landscape, set on ivory paper with near-black green ink. The brand colour guide (`public/brand-color-system.png`) is the source of these values and their hierarchy: Forest primary, Adriatic secondary, Terra tertiary, used sparingly.
 
 ### Primary
 - **Forest** (`forest`): the brand's voice. Primary buttons, the download panel, the user avatar and the featured card in the app preview, the front hill in the landscape, and text selection.
@@ -129,7 +129,7 @@ A warm, earthy palette: three accents taken from the region's landscape, set on 
 - **Forest tint**, **Adriatic tint**, **Terra Cotta tint** (`forest-tint`, `adriatic-tint`, `terra-cotta-tint`): pale backgrounds for the three feature cards (Luoghi, Eventi, Le tue scoperte), one accent per card.
 
 ### Named Rules
-**The Terracotta Pinch Rule.** Terra Cotta marks labels, pins and roofs. It never fills a button or a panel.
+**The Terracotta Pinch Rule.** Terra Cotta is used sparingly, for labels, pins, badges and callouts (the brand guide's "accenti, callout, badge"). It is never the primary call to action: that is Forest.
 
 **The Mix, Don't Invent Rule.** New shades come from `color-mix()` on existing tokens (with white, black, ivory or transparent), as the incumbent code does. Do not add new hex values.
 
@@ -219,5 +219,5 @@ A blob-shaped frame in Adriatic mixed with white, a warm sun disc, two Forest hi
 ### Don't:
 - **Don't** make it look like an institutional portal: no crests, banners, dense link grids or bureaucratic tables.
 - **Don't** make it look like a tech startup: no purple gradients, neon dark mode, or glassmorphism as a surface style.
-- **Don't** fill buttons or large panels with Terra Cotta; it is for small signals.
+- **Don't** use Terra Cotta for the primary CTA or as the dominant colour of a page section.
 - **Don't** introduce sharp corners or hard-edged, heavy drop shadows.

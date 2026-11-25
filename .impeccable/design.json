@@ -318,7 +318,7 @@
     "rules": [
       {
         "name": "The Terracotta Pinch Rule",
-        "body": "Terra Cotta marks labels, pins and roofs. It never fills a button or a panel.",
+        "body": "Terra Cotta is used sparingly, for labels, pins, badges and callouts (the brand guide's \"accenti, callout, badge\"). It is never the primary call to action: that is Forest.",
         "section": "colors"
       },
       {
@@ -352,8 +352,8 @@
     "donts": [
       "**Don't** make it look like an institutional portal: no crests, banners, dense link grids or bureaucratic tables.",
       "**Don't** make it look like a tech startup: no purple gradients, neon dark mode, or glassmorphism as a surface style.",
-      "**Don't** fill buttons or large panels with Terra Cotta; it is for small signals.",
-      "**Don't** introduce sharp corners or hard-edged, heavy drop shadows."
+      "**Don't** introduce sharp corners or hard-edged, heavy drop shadows.",
+      "Don't use Terra Cotta for the primary CTA or as the dominant colour of a page section."
     ]
   }
 }
