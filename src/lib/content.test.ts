@@ -27,6 +27,7 @@ const ev = (start_date: string, end_date: string | null, all_day = false) =>
 test('eventWhen formats in Europe/Rome', () => {
   assert.equal(eventWhen(ev('2025-08-13T17:30:00+00:00', null)), 'mercoledì 13 agosto 2025, ore 19:30');
   assert.equal(eventWhen(ev('2025-08-13T00:00:00+02:00', null, true)), 'mercoledì 13 agosto 2025');
+  assert.equal(eventWhen(ev('2025-08-13T17:30:00+00:00', '2025-08-13T21:59:59.999999+00:00')), 'mercoledì 13 agosto 2025, ore 19:30');
   assert.match(eventWhen(ev('2025-08-13T17:00:00+00:00', '2025-08-15T20:00:00+00:00')), /^dal mercoledì 13 agosto 2025 al venerdì 15 agosto 2025$/);
 });
 

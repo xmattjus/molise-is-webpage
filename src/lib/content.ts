@@ -146,7 +146,8 @@ export function eventWhen(e: Event): string {
   const end = e.end_date ? new Date(e.end_date) : null;
   if (end && dayKey(end) !== dayKey(start)) return `dal ${dateFmt.format(start)} al ${dateFmt.format(end)}`;
   if (e.all_day) return dateFmt.format(start);
-  return `${dateFmt.format(start)}, ore ${timeFmt.format(start)}${end ? `–${timeFmt.format(end)}` : ''}`;
+  // Like the app: the start time only, never the end time
+  return `${dateFmt.format(start)}, ore ${timeFmt.format(start)}`;
 }
 
 export function directionsUrl(r: { latitude: number; longitude: number }) {
