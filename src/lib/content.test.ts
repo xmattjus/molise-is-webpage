@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { eventWhen, excerpt, imageUrl, isPast, slugify, type Event } from './content.ts';
+import { eventWhen, excerpt, imageSrcset, imageUrl, isPast, slugify, type Event } from './content.ts';
 
 test('slugify keeps Italian names readable', () => {
   assert.equal(slugify("Basilica Minore dell'Addolorata"), 'basilica-minore-delladdolorata');
@@ -11,6 +11,14 @@ test('slugify keeps Italian names readable', () => {
 test('imageUrl resizes Cloudinary only', () => {
   assert.equal(imageUrl('https://res.cloudinary.com/x/image/upload/v1/a.jpg', 640), 'https://res.cloudinary.com/x/image/upload/f_auto,q_auto,c_limit,w_640/v1/a.jpg');
   assert.equal(imageUrl('https://upload.wikimedia.org/a.jpg', 640), 'https://upload.wikimedia.org/a.jpg');
+});
+
+test('imageSrcset lists Cloudinary widths only', () => {
+  assert.equal(
+    imageSrcset('https://res.cloudinary.com/x/image/upload/v1/a.jpg', [320, 640]),
+    'https://res.cloudinary.com/x/image/upload/f_auto,q_auto,c_limit,w_320/v1/a.jpg 320w, https://res.cloudinary.com/x/image/upload/f_auto,q_auto,c_limit,w_640/v1/a.jpg 640w',
+  );
+  assert.equal(imageSrcset('https://upload.wikimedia.org/a.jpg', [320, 640]), undefined);
 });
 
 const ev = (start_date: string, end_date: string | null, all_day = false) =>

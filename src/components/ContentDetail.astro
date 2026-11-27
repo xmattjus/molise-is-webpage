@@ -1,5 +1,5 @@
 ---
-import { categories, directionsUrl, eventWhen, imageUrl, isPast, paragraphs, type Event, type Media, type Place } from '../lib/content';
+import { categories, directionsUrl, eventWhen, imageSrcset, imageUrl, isPast, paragraphs, type Event, type Media, type Place } from '../lib/content';
 
 interface Props {
   item: Place | Event;
@@ -43,6 +43,8 @@ const credit = (m: Media) => [m.author, m.license].filter(Boolean).join(' · ');
       <figure class={`poster poster--${cat?.tone ?? 'sky'} cover`} style="--tilt:1.6deg">
         <img
           src={imageUrl(cover.url, 1100)}
+          srcset={imageSrcset(cover.url, [400, 640, 900, 1100])}
+          sizes="(max-width: 52rem) calc(100vw - 3.5rem), 34rem"
           alt={cover.description ?? item.name}
           width={cover.width}
           height={cover.height}
@@ -64,6 +66,8 @@ const credit = (m: Media) => [m.author, m.license].filter(Boolean).join(' · ');
         <figure class="poster poster--sheet shot" style={`--tilt:${i % 2 ? '1deg' : '-1.2deg'}`}>
           <img
             src={imageUrl(m.url, 640)}
+            srcset={imageSrcset(m.url, [320, 480, 640, 960])}
+            sizes="(max-width: 40rem) calc(100vw - 3.5rem), 22rem"
             alt={m.description ?? item.name}
             width={m.width}
             height={m.height}

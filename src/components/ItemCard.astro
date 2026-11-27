@@ -1,5 +1,5 @@
 ---
-import { categories, eventWhen, imageUrl, isPast, type Event, type Place } from '../lib/content';
+import { categories, eventWhen, imageSrcset, imageUrl, isPast, type Event, type Place } from '../lib/content';
 
 interface Props {
   item: Place | Event;
@@ -22,6 +22,8 @@ const meta =
     {cover && (
       <img
         src={imageUrl(cover.url, 640)}
+        srcset={imageSrcset(cover.url, [320, 480, 640, 960])}
+        sizes="(max-width: 40rem) calc(100vw - 3.5rem), 20rem"
         alt={cover.description ?? item.name}
         width={cover.width}
         height={cover.height}

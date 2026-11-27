@@ -132,6 +132,11 @@ export function imageUrl(url: string, width: number): string {
     : url;
 }
 
+// Widths for a srcset; undefined when the host cannot resize, so the plain src is used.
+export function imageSrcset(url: string, widths: number[]): string | undefined {
+  return imageUrl(url, 1) === url ? undefined : widths.map((w) => `${imageUrl(url, w)} ${w}w`).join(', ');
+}
+
 const dateFmt = new Intl.DateTimeFormat('it-IT', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Rome' });
 const timeFmt = new Intl.DateTimeFormat('it-IT', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Rome' });
 const dayKey = (d: Date) => d.toLocaleDateString('it-IT', { timeZone: 'Europe/Rome' });
