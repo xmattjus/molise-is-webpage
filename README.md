@@ -59,14 +59,13 @@ Il risultato statico viene generato in `dist/` e viene pubblicato tramite Cloudf
 - `/luoghi/{slug}/` — un luogo (solo quelli con descrizione)
 - `/eventi/` e `/eventi/{slug}/` — elenco e dettaglio eventi (senza descrizione: `noindex`)
 - `/scopri/{categoria}/` — luoghi ed eventi per categoria
-- `/privacy-policy` — struttura predisposta per la privacy policy definitiva
-- `/termini-e-condizioni` — struttura predisposta per i termini e condizioni definitivi
+- `/privacy-policy/` — privacy policy (unica fonte: `src/pages/privacy-policy.astro`)
+- `/termini-e-condizioni/` — termini di utilizzo (unica fonte: `src/pages/termini-e-condizioni.astro`)
 
-Le due pagine legali contengono soltanto placeholder editoriali e **non sono testi legali pronti alla pubblicazione**.
+- `/404.html` — pagina non trovata (servita da Cloudflare per ogni URL inesistente)
 
 ## Da completare prima della pubblicazione
 
-- Testi legali definitivi per Privacy policy e Termini e condizioni.
 - Verifica/aggiornamento dell'indirizzo email di contatto.
 - Eventuale logo ufficiale al posto del wordmark/mark CSS del prototipo.
 - Immagine Open Graph quando sarà disponibile un asset social definitivo.

@@ -263,7 +263,7 @@ A real app screenshot printed into a poster: App Surface backing, 1.1rem corners
 Printed labels flat on the wall, not buttons: Fraunces 700 at 1.25rem, 2px corners, grain, mint/sky/peach container stock with on-container text, each with its own small tilt. Non-interactive list items.
 
 ### Notice Sheet
-A small white sheet poster (max 24rem, tilt -1deg) with a Fraunces 850 title at 1.7rem and one Stone Text line, used for an aside such as "Manca un posto?". The draft banner on legal pages is the peach-container variant.
+A small white sheet poster (max 24rem, tilt -1deg) with a Fraunces 850 title at 1.7rem and one Stone Text line, used for an aside such as "Manca un posto?".
 
 ### Navigation
 Header sits directly on the wall: pin logo (1.9rem) plus "Molise Is" in Fraunces 850 at 1.45rem, two Lexend 500 text links that underline on hover and hide below 40rem, and the download link. Footer repeats the pin and name above an Ink-14% rule, with Stone Text links that turn Ink and underline on hover.

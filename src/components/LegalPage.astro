@@ -1,22 +1,17 @@
 ---
 interface Props {
   title: string;
-  intro: string;
+  updated: string;
 }
 
-const { title, intro } = Astro.props;
+const { title, updated } = Astro.props;
 ---
 
 <main class="legal container">
-  <article class="poster poster--sheet sheet" style="--tilt:-0.4deg">
+  <!-- Hung straight: on a sheet this tall any tilt swings its ends off the screen -->
+  <article class="poster poster--sheet sheet">
     <h1 class="headline">{title}</h1>
-    <p class="intro">{intro}</p>
-
-    <aside class="draft" role="note">
-      <strong>Pagina predisposta.</strong>{' '}
-      La struttura è pronta per il testo legale definitivo. Il contenuto qui presente è indicativo e non
-      sostituisce una privacy policy o termini e condizioni validati.
-    </aside>
+    <p class="updated">Ultimo aggiornamento: {updated}</p>
 
     <div class="body">
       <slot />
@@ -34,51 +29,60 @@ const { title, intro } = Astro.props;
     padding: clamp(1.75rem, 5vw, 4rem);
   }
 
-  .intro {
-    max-width: 40rem;
-    margin: 1.25rem 0 0;
-    color: var(--color-text-muted);
-    font-size: 1.1rem;
+  .headline {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
   }
 
-  .draft {
-    margin-top: 2rem;
-    padding: 1rem 1.15rem;
-    border-radius: 2px;
-    color: var(--color-on-tertiary-container);
-    background: var(--color-tertiary-container);
+  .updated {
+    margin: 1.25rem 0 0;
+    color: var(--color-text-muted);
     font-size: 0.9rem;
   }
 
   .body {
     max-width: 65ch;
-    margin-top: 2.5rem;
+    margin-top: clamp(2rem, 4vw, 2.75rem);
+    overflow-wrap: break-word;
   }
 
   .body :global(h2) {
-    margin: 2.5rem 0 0.75rem;
+    margin: 3rem 0 0.75rem;
     font-family: var(--font-display);
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.1;
+    text-wrap: balance;
   }
 
-  .body :global(h2:first-child) {
-    margin-top: 0;
+  .body :global(h3) {
+    margin: 2rem 0 0.5rem;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
   }
 
-  .body :global(p),
-  .body :global(li) {
-    color: color-mix(in srgb, var(--color-text) 82%, transparent);
+  .body :global(p) {
+    margin: 0 0 1em;
+    text-wrap: pretty;
   }
 
   .body :global(ul) {
+    margin: 0 0 1em;
     padding-left: 1.25rem;
   }
 
-  .body :global(a) {
+  .body :global(li + li) {
+    margin-top: 0.35em;
+  }
+
+  .body :global(li::marker) {
     color: var(--brand-forest);
-    font-weight: 500;
+  }
+
+  .body :global(strong) {
+    font-weight: 700;
   }
 </style>

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { categories } from '../lib/content';
+
+const tilts = ['-3deg', '2deg', '-1.5deg', '3deg', '-2deg', '1.5deg'];
+---
+
+<BaseLayout title="Pagina non trovata — Molise Is" description="Questa pagina non esiste più." noindex>
+  <Header />
+  <main class="lost container">
+    <div class="wall">
+      <!-- The paler patch of plaster where a poster used to hang -->
+      <div class="ghost" aria-hidden="true">
+        <span class="scrap scrap--a"></span>
+        <span class="scrap scrap--b"></span>
+      </div>
+
+      <div class="poster poster--sheet note paste" style="--tilt:-1.2deg">
+        <span class="strip" style="--tilt:-4deg">Errore 404</span>
+        <h1 class="headline">Qui il manifesto non c’è più.</h1>
+        <p class="lede">
+          La pagina che cerchi è stata staccata dal muro, o forse non c’è mai stata. Il resto del Molise è ancora tutto qui.
+        </p>
+        <div class="actions">
+          <a class="button" href="/">Torna alla home</a>
+          <a class="more" href="/eventi/">Vedi gli eventi</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="tag list-label" id="categorie-404">Oppure sfoglia per categoria</p>
+    <ul class="chips" aria-labelledby="categorie-404">
+      {Object.values(categories).map((c, i) => (
+        <li><a class={`chip chip--${c.tone}`} href={`/scopri/${c.slug}/`} style={`--tilt:${tilts[i]}`}>{c.label}</a></li>
+      ))}
+    </ul>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .lost {
+    padding-block: clamp(2rem, 6vw, 5rem) var(--section-space);
+  }
+
+  .wall {
+    display: grid;
+  }
+
+  .ghost,
+  .note {
+    grid-area: 1 / 1;
+  }
+
+  .ghost {
+    position: relative;
+    width: min(100%, 44rem);
+    justify-self: end;
+    margin: -1.5rem -0.5rem 0 0;
+    border-radius: var(--radius-paper);
+    background: color-mix(in srgb, var(--brand-ink) 5%, var(--color-wall));
+    rotate: 3deg;
+  }
+
+  /* Torn corners left behind by the paste */
+  .scrap {
+    position: absolute;
+    width: 4.5rem;
+    height: 3.5rem;
+    background: var(--grain), var(--color-tertiary-container);
+    box-shadow: 0 1px 1px rgb(23 33 28 / 0.08);
+  }
+
+  .scrap--a {
+    top: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 62%, 58% 78%, 34% 30%, 16% 38%);
+  }
+
+  .scrap--b {
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 0, 22% 34%, 40% 22%, 66% 70%, 84% 58%, 100% 100%, 0 100%);
+  }
+
+  .note {
+    z-index: 1;
+    width: min(100%, 44rem);
+    padding: clamp(2rem, 5vw, 3.75rem) clamp(1.5rem, 5vw, 3.75rem);
+  }
+
+  .note .strip {
+    bottom: -0.9rem;
+    right: -0.8rem;
+  }
+
+  .headline {
+    max-width: 11ch;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-top: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .more {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    font-weight: 500;
+    text-decoration-thickness: 1px;
+  }
+
+  .more:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .list-label {
+    margin-top: clamp(3.5rem, 8vw, 5rem);
+    color: var(--color-text-muted);
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 0.6rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (max-width: 46rem) {
+    .ghost {
+      margin: -1rem 0 0;
+      rotate: 2deg;
+    }
+
+    .note .strip {
+      right: 0.5rem;
+    }
+  }
+</style>
