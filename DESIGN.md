@@ -265,6 +265,9 @@ Printed labels flat on the wall, not buttons: Fraunces 700 at 1.25rem, 2px corne
 ### Notice Sheet
 A small white sheet poster (max 24rem, tilt -1deg) with a Fraunces 850 title at 1.7rem and one Stone Text line, used for an aside such as "Manca un posto?".
 
+### Details Sheet
+The facts of a place or event on detail pages: a white sheet poster (tilt -0.8deg) holding a `<dl>` of rows, each a Lexend caps label in Stone Text ("Quando", "Dove", "Categoria") over a Lexend 500 value, rows divided by an Ink-14% rule, then the full-width "Indicazioni stradali" paper button. A past event carries a "Concluso" paste strip on its corner. New fields join as new rows. On phones it sits between the cover and the text; on desktop it hangs under the cover and both stay sticky beside the text (the cover is capped at the viewport minus 24rem so the pair fits); when there is no description it moves under the title, with the cover beside both. Event covers are shown whole (`object-fit: contain` on their stock, capped at 70svh on phones), never cropped, since flyers carry their date in print.
+
 ### Navigation
 Header sits directly on the wall: pin logo (1.9rem) plus "Molise Is" in Fraunces 850 at 1.45rem, two Lexend 500 text links that underline on hover and hide below 40rem, and the download link. Footer repeats the pin and name above an Ink-14% rule, with Stone Text links that turn Ink and underline on hover.
 

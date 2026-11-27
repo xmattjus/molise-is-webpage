@@ -10,11 +10,20 @@ const cat = item.category === 'unknown' ? undefined : categories[item.category];
 const [cover, ...gallery] = item.media;
 const past = item.kind === 'event' && isPast(item);
 const city = item.cities?.name;
+const description = paragraphs(item.description);
+
+// The details sheet: add a row here when the app gains a new field (address, price, organiser…)
+type Detail = { label: string; value: string; href?: string };
+const details = [
+  item.kind === 'event' && { label: 'Quando', value: eventWhen(item) },
+  city && { label: 'Dove', value: city },
+  cat && { label: 'Categoria', value: cat.label, href: `/scopri/${cat.slug}/` },
+].filter((d): d is Detail => Boolean(d));
 
 const credit = (m: Media) => [m.author, m.license].filter(Boolean).join(' · ');
 ---
 
-<article class="detail container">
+<article class={`detail container detail--${item.kind}`}>
   <nav class="crumbs" aria-label="Percorso">
     <a href="/">Molise Is</a>
     <span aria-hidden="true">/</span>
@@ -22,42 +31,49 @@ const credit = (m: Media) => [m.author, m.license].filter(Boolean).join(' · ');
   </nav>
 
   <div class="layout">
-    <div class={`poster poster--sheet text`} style="--tilt:-0.4deg">
-      {past && <span class="strip" style="--tilt:4deg">Concluso</span>}
+    <div class="poster poster--sheet text" style="--tilt:-0.4deg">
       <h1 class="headline">{item.name}</h1>
-      <p class="facts">
-        {item.kind === 'event' && <span class="when">{eventWhen(item)}</span>}
-        <span>{[cat?.label, city].filter(Boolean).join(' · ')}</span>
-      </p>
-
-      {paragraphs(item.description).length > 0 && (
+      {description.length > 0 && (
         <div class="body">
-          {paragraphs(item.description).map((p) => <p>{p}</p>)}
+          {description.map((p) => <p>{p}</p>)}
         </div>
       )}
-
-      <a class="button" href={directionsUrl(item)} rel="noopener noreferrer">Indicazioni stradali</a>
     </div>
 
-    {cover && (
-      <figure class={`poster poster--${cat?.tone ?? 'sky'} cover`} style="--tilt:1.6deg">
-        <img
-          src={imageUrl(cover.url, 1100)}
-          srcset={imageSrcset(cover.url, [400, 640, 900, 1100])}
-          sizes="(max-width: 52rem) calc(100vw - 3.5rem), 34rem"
-          alt={cover.description ?? item.name}
-          width={cover.width}
-          height={cover.height}
-          loading="eager"
-          referrerpolicy="no-referrer"
-        />
-        {credit(cover) && (
-          <figcaption>
-            Foto: {cover.license_url ? <a href={cover.license_url} rel="noopener noreferrer">{credit(cover)}</a> : credit(cover)}
-          </figcaption>
-        )}
-      </figure>
-    )}
+    <div class="side">
+      {cover && (
+        <figure class={`poster poster--${cat?.tone ?? 'sky'} cover`} style="--tilt:1.6deg">
+          <img
+            src={imageUrl(cover.url, 1100)}
+            srcset={imageSrcset(cover.url, [400, 640, 900, 1100])}
+            sizes="(max-width: 52rem) calc(100vw - 3.5rem), 34rem"
+            alt={cover.description ?? item.name}
+            width={cover.width}
+            height={cover.height}
+            loading="eager"
+            referrerpolicy="no-referrer"
+          />
+          {credit(cover) && (
+            <figcaption>
+              Foto: {cover.license_url ? <a href={cover.license_url} rel="noopener noreferrer">{credit(cover)}</a> : credit(cover)}
+            </figcaption>
+          )}
+        </figure>
+      )}
+
+      <section class="poster poster--sheet info" style="--tilt:-0.8deg" aria-label="Dettagli">
+        {past && <span class="strip" style="--tilt:4deg">Concluso</span>}
+        <dl>
+          {details.map((d) => (
+            <div class="row">
+              <dt class="tag">{d.label}</dt>
+              <dd>{d.href ? <a href={d.href}>{d.value}</a> : d.value}</dd>
+            </div>
+          ))}
+        </dl>
+        <a class="button" href={directionsUrl(item)} rel="noopener noreferrer">Indicazioni stradali</a>
+      </section>
+    </div>
   </div>
 
   {gallery.length > 0 && (
@@ -111,29 +127,8 @@ const credit = (m: Media) => [m.author, m.license].filter(Boolean).join(' · ');
     padding: clamp(1.5rem, 4vw, 3rem);
   }
 
-  .text .strip {
-    top: -0.9rem;
-    right: -0.8rem;
-  }
-
   .headline {
     font-size: clamp(2.2rem, 5vw, 4rem);
-  }
-
-  .facts {
-    display: grid;
-    gap: 0.2rem;
-    margin: 1rem 0 0;
-    color: var(--color-text-muted);
-  }
-
-  .when::first-letter {
-    text-transform: uppercase;
-  }
-
-  .when {
-    color: var(--color-text);
-    font-weight: 700;
   }
 
   .body {
@@ -147,8 +142,13 @@ const credit = (m: Media) => [m.author, m.license].filter(Boolean).join(' · ');
     text-wrap: pretty;
   }
 
-  .text .button {
-    margin-top: 1.5rem;
+  .body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .side {
+    display: grid;
+    gap: 1.5rem;
   }
 
   .cover {
@@ -165,6 +165,58 @@ const credit = (m: Media) => [m.author, m.license].filter(Boolean).join(' · ');
 
   .cover img {
     aspect-ratio: 4 / 5;
+  }
+
+  /* Event covers are often flyers with the date printed on them: show them whole, on the sheet's stock */
+  .detail--event .cover img {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .info {
+    padding: 1.25rem 1.4rem 1.5rem;
+  }
+
+  .info .strip {
+    top: -0.9rem;
+    right: -0.6rem;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  .row {
+    padding-block: 0.7rem;
+  }
+
+  .row:first-child {
+    padding-top: 0;
+  }
+
+  .row + .row {
+    border-top: 1px solid var(--color-border);
+  }
+
+  dt {
+    display: block;
+    color: var(--color-text-muted);
+  }
+
+  dd {
+    margin: 0.2rem 0 0;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  dd::first-letter {
+    text-transform: uppercase;
+  }
+
+  .info .button {
+    width: 100%;
+    margin-top: 0.9rem;
   }
 
   .shot img {
@@ -193,17 +245,58 @@ const credit = (m: Media) => [m.author, m.license].filter(Boolean).join(' · ');
     padding: 0.6rem;
   }
 
+  /* Desktop: the photo and its details travel beside the text. The cap keeps both on screen */
+  @media (min-width: 52.01rem) {
+    .cover img {
+      max-height: calc(100svh - 24rem);
+    }
+  }
+
+  @media (min-width: 52.01rem) and (min-height: 40rem) {
+    .side {
+      position: sticky;
+      top: 1.5rem;
+    }
+  }
+
+  /* No description: nothing to scroll past, so the details sit under the title, the poster beside both */
+  @media (min-width: 52.01rem) {
+    .layout:not(:has(.body)) .side {
+      display: contents;
+    }
+
+    .layout:not(:has(.body)) .info {
+      grid-column: 1;
+      max-width: 28rem;
+    }
+
+    .layout:not(:has(.body)) .cover {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+  }
+
+  /* Phone: photo, then details, then the text */
   @media (max-width: 52rem) {
     .layout {
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .cover {
+    .side {
       order: -1;
     }
 
     .cover img {
       aspect-ratio: 4 / 3;
+    }
+
+    .detail--event .cover img {
+      aspect-ratio: auto;
+      max-height: 70svh;
+    }
+
+    .info .strip {
+      right: -0.25rem;
     }
   }
 </style>
