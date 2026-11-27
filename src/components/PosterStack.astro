@@ -133,6 +133,11 @@ const sheets = [
       width: min(78%, 17rem);
       justify-self: center;
     }
+
+    /* The gutter is only 1rem here: overhang less so the tilted strip stays on screen */
+    .strip--0,
+    .strip--2 { left: -0.25rem; }
+    .strip--1 { right: -0.25rem; }
   }
 
   /* Signature: the posters peel off the wall one by one as you scroll */
