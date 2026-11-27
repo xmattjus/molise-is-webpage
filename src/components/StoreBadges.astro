@@ -21,11 +21,18 @@
   .badges a {
     display: block;
     border-radius: 9px;
-    transition: translate 180ms var(--ease-paste);
+    transition: translate 180ms var(--ease-paste), box-shadow 180ms var(--ease-paste);
   }
 
   .badges a:hover {
-    translate: 0 -2px;
+    translate: 0 var(--lift);
+  }
+
+  /* Without the rise, the badge still answers the pointer */
+  @media (prefers-reduced-motion: reduce) {
+    .badges a:hover {
+      box-shadow: var(--shadow-paper);
+    }
   }
 
   .badges img {

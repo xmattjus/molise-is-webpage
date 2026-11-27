@@ -272,7 +272,7 @@ Header sits directly on the wall: pin logo (1.9rem) plus "Molise Is" in Fraunces
 "Uno sopra l'altro": three large poster sheets (Luoghi, Eventi, Scoperte) stacked in one sticky viewport; as the section scrolls, each top sheet lifts (Lifted shadow, -3deg extra tilt) and peels up and off to the left, revealing the next with its real screen. Driven by a CSS view timeline over a 330vh track. Without `animation-timeline` support, under reduced motion, or below 52rem wide / 40rem tall, the sheets sit side by side as a static staggered column.
 
 ### Paste-in Motion
-Posters that load in the first view are pasted once: from 10px up, 102.5% scale and the Lifted shadow to rest, 700ms on `cubic-bezier(0.16, 1, 0.3, 1)`, staggered 70ms by paste order. The resting state is the visible default; reduced motion removes all transitions and animation.
+Posters that load in the first view are pasted once: from 10px up, 102.5% scale and the Lifted shadow to rest, 700ms on `cubic-bezier(0.16, 1, 0.3, 1)`, staggered 70ms by paste order. The resting state is the visible default. Under reduced motion there is no paste-in, no peel and no smooth scroll, and hovers keep their shadow and colour change but do not rise (`--lift: 0`).
 
 ## Do's and Don'ts
 

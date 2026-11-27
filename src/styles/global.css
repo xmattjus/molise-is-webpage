@@ -193,7 +193,7 @@ a.chip:hover {
 }
 
 .button:hover {
-  translate: 0 -2px;
+  translate: 0 var(--lift);
   background: color-mix(in srgb, var(--brand-forest) 88%, black);
   box-shadow: var(--shadow-paper-lifted);
 }
@@ -223,11 +223,8 @@ a.chip:hover {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+  /* Paste-in and peel are already opt-in above; here hovers stop moving but keep their shadow and colour */
+  :root {
+    --lift: 0px;
   }
 }
